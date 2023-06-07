@@ -1,4 +1,4 @@
-# ecommerce-Data-Aanalysis-SQL-Project
+# ecommerce-Data-Analysis-SQL-Project
 
 ## Executive Summary
 In this SQL project, I conducted an extensive analysis of e-commerce sales data, focusing on key objectives and additional insights. The project encompassed the following:
