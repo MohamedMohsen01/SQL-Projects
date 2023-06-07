@@ -1,4 +1,4 @@
-# Walmart_Sales_Data_Analysis_SQL_Project
+# Walmart-Sales-Data-Analysis-SQL-Project
 
 
 ## Project Description
