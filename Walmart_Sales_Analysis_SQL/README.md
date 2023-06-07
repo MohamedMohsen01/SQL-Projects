@@ -130,7 +130,7 @@ $ Revenue = VAT + COGS $
 
 $ Profit = revenue - COGS $
 
-**Profit Margin** is gross profit expressed in percentage of the (total profit/ total revenue)
+$ Profit Margin = (total profit/ total revenue)*100 $
 
 
 <u>**Example with the first row in our DB:**</u>
