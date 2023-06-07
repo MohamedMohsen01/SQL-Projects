@@ -34,28 +34,28 @@ This dataset contains sales transactions from three different branches of Walmar
 
 **Data Understanding:**
 
-> - Familiarized with dataset structure, columns, data types, and data dictionary.
-> - Identified specific business questions or objectives.
+ - Familiarized with dataset structure, columns, data types, and data dictionary.
+ - Identified specific business questions or objectives.
 
 **Data Assessment:**
 
-> - Evaluated data quality and structure for issues like missing values, outliers, and formatting inconsistencies.
+ - Evaluated data quality and structure for issues like missing values, outliers, and formatting inconsistencies.
 
 **Data Cleaning and Preprocessing:**
 
-> - Implemented constraints on the data, including the use of a `Primary Key` constraint to ensure uniqueness, data integrity, and data consistency.
-> - Specified appropriate `data types` for columns to ensure accurate storage and manipulation of data.
-> - Applied `NOT NULL` constraints on specific columns to enforce the requirement that they must have non-null values. This ensures data completeness and prevents     the insertion of null values in those columns.
+ - Implemented constraints on the data, including the use of a `Primary Key` constraint to ensure uniqueness, data integrity, and data consistency.
+ - Specified appropriate `data types` for columns to ensure accurate storage and manipulation of data.
+ - Applied `NOT NULL` constraints on specific columns to enforce the requirement that they must have non-null values. This ensures data completeness and prevents     the insertion of null values in those columns.
 
 
 **Feature Engineering:** 
 
-> - Created new variables and features from existing data that provided additional insights, such as:
-> - created a column called `time_of_day` to capture sales patterns in the Morning, Afternoon, and Evening. This information will help determine the peak sales        periods during the day.
+ - Created new variables and features from existing data that provided additional insights, such as:
+ - created a column called `time_of_day` to capture sales patterns in the Morning, Afternoon, and Evening. This information will help determine the peak sales        periods during the day.
 
-> - created a column named `day_name`to extract the specific day of the week when each transaction occurred (Mon, Tue, Wed, Thur, Fri). This data will aid in understanding the busiest days for each branch.
+ - created a column named `day_name`to extract the specific day of the week when each transaction occurred (Mon, Tue, Wed, Thur, Fri). This data will aid in understanding the busiest days for each branch.
 
-> - created a column named `month_name` to extract the month of the year for each transaction (Jan, Feb, Mar). This data will assist in identifying the months with the highest sales and profitability.
+ - created a column named `month_name` to extract the month of the year for each transaction (Jan, Feb, Mar). This data will assist in identifying the months with the highest sales and profitability.
 
 
 ## Exploratory Data Analysis (EDA): 
