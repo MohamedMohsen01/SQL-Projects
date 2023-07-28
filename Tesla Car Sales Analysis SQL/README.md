@@ -175,10 +175,9 @@ ORDER BY no_of_versions DESC;
 
 ```sql
 -- What is the cumulative gross profit for both first and second quarters of year 2016? 
-SELECT
-	SUM(Gross_Profit) AS total_profit
+SELECT SUM(Gross_Profit) AS total_profit
 FROM CarSales
-WHERE Period >= '2016-01' AND Period <= '2016-06';
+WHERE Period BETWEEN '2016-01' AND '2016-06';
 ```
 
 #### 6. What is the most frequent purchase type?
