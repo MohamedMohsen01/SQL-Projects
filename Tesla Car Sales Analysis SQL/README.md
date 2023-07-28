@@ -118,6 +118,7 @@ This dataset contains 7 columns and 924 rows.
 - ROW_NUMBER()
 - ROUND
 - WHERE BETWEEN
+- Subqueries
 - CASE statement 
 - CTEs
 - STDEV
@@ -434,10 +435,15 @@ ORDER BY Model, Frequency DESC;
 
 ```sql
 -- Which purchase type is most commonly used in each country?
-SELECT Country, Purchase_type
-FROM (SELECT Country, Purchase_type, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY count(*) DESC) AS RN
+SELECT
+	Country,
+	Purchase_type
+FROM (SELECT
+	Country,
+	Purchase_type,
+	ROW_NUMBER() OVER(PARTITION BY Country ORDER BY count(*) DESC) AS RN
 		FROM CarSales
-		GROUP BY Country, Purchase_type) as NewTable
+			GROUP BY Country, Purchase_type) as NewTable
 WHERE RN = 1;
 ```
 
@@ -496,9 +502,14 @@ ORDER BY avg_sal;
 
 ```sql
 -- What is the most sold car Model in each country?
-SELECT Country, Model
-FROM (SELECT Country, Model, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY Model DESC) AS RN
-	FROM CarSales) as sales_model
+SELECT
+	Country,
+	Model
+FROM (SELECT
+	Country,
+	 Model,
+	ROW_NUMBER() OVER(PARTITION BY Country ORDER BY Model DESC) AS RN
+		FROM CarSales) as sales_model
 WHERE RN = 1;
 ```
 
@@ -511,7 +522,7 @@ SELECT
 	Purchase_type,
 	COUNT(Purchase_type) AS no_Pur_type
 FROM CarSales
-WHERE Country = 'Germany' AND Model = 'Model S'
+WHERE (Country = 'Germany') AND (Model = 'Model S')
 GROUP BY Model, Purchase_type
 ORDER BY no_Pur_type DESC;	
 ```
@@ -521,11 +532,11 @@ ORDER BY no_Pur_type DESC;
 ```sql
 -- What is the total gross profit generated from each car version in the US?
 SELECT
-	Model,
+	Version,
 	SUM(Gross_Profit) AS US_totalprofit
 FROM CarSales
 WHERE Country = 'US'
-GROUP BY Model;		
+GROUP BY Version;		
 ```
 
 #### 34. How many sales transactions were made for each car version in the US?
@@ -533,11 +544,11 @@ GROUP BY Model;
 ```sql
 -- How many sales transactions were made for each car version in the US?
 SELECT
-	Model,
-	COUNT(id) AS no_sal_trans
+	Version,
+	COUNT(*) AS no_sal_trans
 FROM CarSales
 WHERE Country = 'US'
-GROUP BY Model;		
+GROUP BY Version;		
 ```
 
 #### 35. What was the most popular car model in terms of sales volume?
@@ -560,6 +571,7 @@ ORDER BY total_sales DESC;
 SELECT
 	Purchase_type,
  	ROUND(AVG(Price), 3) AS avg_sales
+WHERE Country = 'US'
 FROM CarSales
 GROUP BY Purchase_type;				
 ```
