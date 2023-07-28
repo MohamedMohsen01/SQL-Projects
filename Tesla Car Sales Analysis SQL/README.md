@@ -11,7 +11,7 @@ The primary objective of this sales data analytics project is to uncover valuabl
 
 The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-### Data Dectionary
+#### Data Dectionary
 
 This dataset contains 7 columns and 924 rows.
 
@@ -102,6 +102,9 @@ This dataset contains 7 columns and 924 rows.
 46. Calculating the standard deviation of price and gross profits
 47. Is there a correlation between car price and gross profit?
 
+
+
+
 ## Query types used:
 - ALTET TABLE
 - ALTER COLUMN
@@ -114,7 +117,7 @@ This dataset contains 7 columns and 924 rows.
 - AVG
 - ROW_NUMBER()
 - ROUND
-- Where between
+- WHERE BETWEEN
 - CASE statement 
 - CTEs
 - STDEV
@@ -123,365 +126,355 @@ This dataset contains 7 columns and 924 rows.
 
 
 
-3. #### Writing Scripts For some Questions Listed
+3. ## Writing Scripts For some Questions Listed
 
-#### 1. To understand the most paid career
-
-```sql
--- To understand the most paid career
-SELECT
-	Department,
-    SUM(Salary) AS sum_salary
-FROM HR_data
-GROUP BY Department
-ORDER BY sum_salary DESC;
-```
-
-#### 2. What is the average salary of each category?
+#### 1. What date range are we dealing with in this dataset?
 
 ```sql
--- What is the average salary of each category?
+-- What date range are we dealing with in this dataset?
 SELECT
-	Department,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY Department
-ORDER BY avg_salary DESC;
+	MIN(Period) AS Min_Period,
+	MAX(Period) AS Max_Period
+FROM CarSales;																	
 ```
 
-#### 3. How does gender affect the salary of an employee
+#### 2. What is the number of unique car models in the data?
 
 ```sql
--- How does gender affect the salary of an employee
+-- What is the number of unique car models in the data?
 SELECT
-	Department,
-    Sex,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY Department, Sex
-ORDER BY Department, RaceDesc;
+	COUNT(DISTINCT Model) AS no_of_models
+FROM CarSales;		
 ```
 
-#### 4. How does race(white/black/Asian...) affect the salary of an employee?
-
-[Gain understanding of CTEs in MySQL](https://youtu.be/GbRvy-fZ_r0)
+#### 3. Which purchase type is most commonly used by people?
 
 ```sql
--- How does race(white/black/Asian...) affect the salary of an employee
-WITH CTE_tbl1 AS (SELECT
-	Department,
-    RaceDesc,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY Department, RaceDesc)
+-- Which purchase type is most commonly used by people?
 SELECT
-	*,
-    ROW_NUMBER() OVER(PARTITION BY Department ORDER BY Department, avg_salary DESC) AS position
-FROM CTE_tbl1;
+	TOP 1 Purchase_type,
+	COUNT(*) AS no_of_purchases 
+FROM CarSales
+GROUP BY Purchase_type
+ORDER BY no_of_purchases DESC;	
 ```
 
-#### 5. How does race(white/black/Asian...) affect employee position?
-
-[Gain understanding of CTEs in MySQL](https://youtu.be/GbRvy-fZ_r0)
+#### 4. Which car version is the most popular among buyers?
 
 ```sql
--- How does race(white/black/Asian...) affect employee position?
-WITH cte_tbl AS (SELECT
-	Position,
-    RaceDesc,
-    COUNT(Position) AS cnt_pos
-FROM HR_data
-GROUP BY Position, RaceDesc)
+-- Which car version is the most popular among buyers?
 SELECT
-	*,
-    ROW_NUMBER() OVER(PARTITION BY Position ORDER BY cnt_pos DESC) AS rank_position
-FROM cte_tbl;
+	Version,
+	COUNT(*) AS no_of_versions 
+FROM CarSales
+GROUP BY Version
+ORDER BY no_of_versions DESC;
 ```
 
-#### 7. What is the most common recruitement source and how does recruitement source affect salary and EmpSatisfaction?
+#### 5. What is the cumulative gross profit for both first and second quarters of year 2016? 
 
 ```sql
--- What is the most common recruitement source and how does
--- recruitement source affect salary and EmpSatisfaction?
+-- What is the cumulative gross profit for both first and second quarters of year 2016? 
 SELECT
-	RecruitmentSource,
-    AVG(Salary) as avg_salary,
-	COUNT(RecruitmentSource) AS count
-FROM HR_data
-GROUP BY RecruitmentSource
-ORDER BY avg_salary DESC;
+	SUM(Gross_Profit) AS total_profit
+FROM CarSales
+WHERE Period >= '2016-01' AND Period <= '2016-06';
 ```
 
-#### 8. What is the categorization count for EmploymentStatus?
-
-[Gain understanding of Sub-queries in MySQL](https://youtu.be/ryrLlxFt48Q)
+#### 6. What is the most frequent purchase type?
 
 ```sql
--- What is the categorization count for EmploymentStatus?
+-- What is the most frequent purchase type?
 SELECT
-	*,
-    ROW_NUMBER() OVER(PARTITION BY Department ORDER BY Department DESC) AS status_rank
-FROM(SELECT
-	Department,
-    EmploymentStatus,
-    COUNT(EmploymentStatus) AS status
-FROM HR_data
-GROUP BY Department, EmploymentStatus
-ORDER BY Department, status DESC) AS subquery;
+	TOP 1 Purchase_type,
+	COUNT(*) AS Frequent_Purchase
+FROM CarSales
+GROUP BY Purchase_type
+ORDER BY COUNT(*) DESC;
 ```
 
-![Image  08](./images/image_08.png)
-
-#### 9. What is the average salary based on department?
+#### 7. How does the average gross profit vary across different car versions for each country?
 
 ```sql
--- What is the average salary based on department?
+-- How does the average gross profit vary across different car versions for each country?
 SELECT
-	Department,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY Department
-ORDER BY avg_salary DESC;
+	Country,
+	Version,
+	AVG(Gross_Profit) AS Avg_Gross_Profit
+FROM CarSales
+GROUP BY Country, Version
+ORDER BY Country, Avg_Gross_Profit DESC;
 ```
 
-![Image  09](./images/image_09.png)
-
-#### 10. Which state has the most paid salary?
+#### 8. what is the most sold car version in each country?
 
 ```sql
--- Which state has the most paid salary?
-SELECT
-	State,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY State
-ORDER BY avg_salary DESC;
+-- what is the most sold car version in each country?
+SELECT Country, Version
+FROM (
+  SELECT Country, Version, 
+         ROW_NUMBER() OVER (PARTITION BY Country ORDER BY COUNT(*) DESC) AS RN
+  FROM CarSales
+  GROUP BY Country, Version
+) AS sales_version
+WHERE RN = 1;
 ```
 
-![Image  10](./images/image_10.png)
-
-#### 11. What is the most common reason for termination?
+#### 9. What is the total gross profit and sales for each country?
 
 ```sql
--- What is the most common reason for termination?
+-- What is the total gross profit and sales for each country?
 SELECT
-	TermReason,
-    COUNT(TermReason) AS count
-FROM HR_data
-GROUP BY TermReason
-ORDER BY count DESC;
+	Country,
+	SUM(Gross_Profit) AS Total_Gross_Profit,
+	SUM(Price) AS Total_Sales
+FROM CarSales
+GROUP BY Country
+ORDER BY Total_Gross_Profit DESC;
 ```
 
-![Image  11](./images/image_11.png)
-
-#### 12. What is the most common reason for termination by race?
+#### 10. How many car models were sold in the US in January 2016?
 
 ```sql
--- What is the most common reason for termination by race?
+-- How many car models were sold in the US in January 2016?
 SELECT
-	RaceDesc,
-	TermReason,
-    COUNT(TermReason) AS count
-FROM HR_data
-GROUP BY TermReason, RaceDesc
-ORDER BY RaceDesc, count DESC;
+	Model,
+	COUNT(DISTINCT Model) AS us_no_models
+FROM CarSales
+WHERE (Country = 'US') AND (Period = '2016-01')
+GROUP BY Model;		
 ```
 
-![Image  12](./images/image_12.png)
-
-#### 13. What is the most common EmploymentStatus?
+#### 11. Which car version had the highest price in the US?
 
 ```sql
--- What is the most common EmploymentStatus?
+-- Which car version had the highest price in the US?
 SELECT
-	EmploymentStatus,
-    COUNT(EmploymentStatus) AS count
-FROM HR_data
-GROUP BY EmploymentStatus
-ORDER BY count DESC;
+	Model,
+	ROUND(SUM(Price), 2) AS US_total_price
+FROM CarSales
+WHERE Country = 'US'
+GROUP BY Model
+ORDER BY US_total_price DESC;
 ```
 
-![Image  13](./images/image_13.png)
-
-#### 14. Which recruitment source give employees with best performance score?
+#### 12. Which country had the highest number of cash purchases?
 
 ```sql
--- Which recruitment source give employees with best performance score?
+-- Which country had the highest number of cash purchases?
 SELECT
-	RecruitmentSource,
-    PerformanceScore,
-    COUNT(PerformanceScore) AS perf_cnt
-FROM HR_data
-GROUP BY RecruitmentSource, PerformanceScore
-ORDER BY RecruitmentSource, PerformanceScore;
+	TOP 1 Country,
+	COUNT(*) AS no_Purchase
+FROM CarSales
+WHERE Purchase_type = 'Cash purchase'
+GROUP BY Country
+ORDER BY no_Purchase DESC;;
 ```
 
-![Image  14](./images/image_14.png)
-
-#### 15. Which department has the most absenties?
+#### 13. What is the distribution of car prices in the US for January 2016?
 
 ```sql
--- Which department has the most absenties?
+-- What is the distribution of car prices in the US for January 2016?
 SELECT
-	Department,
-    SUM(Absences) AS absence_cnt
-FROM HR_data
-GROUP BY Department
-ORDER BY absence_cnt DESC;
+	Price,
+	COUNT(*) AS Frequency
+FROM CarSales  
+WHERE (Country = 'US') AND (Period = '2016-01')
+GROUP BY Price
+ORDER BY Frequency DESC;
 ```
 
-![Image  15](./images/image_15.png)
-
-
-
-#### 16. Which race has the most absenties?
+#### 14. What is the highest car price in each country?
 
 ```sql
--- Which race has the most absenties?
-SELECT
-	RaceDesc,
-    SUM(Absences) AS absence_cnt
-FROM HR_data
-GROUP BY RaceDesc
-ORDER BY absence_cnt DESC;
+-- What is the highest car price in each country?
+SELECT Country, Price
+FROM (SELECT Country, Price, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY SUM(Price) DESC) AS RN
+		FROM CarSales
+		GROUP BY Country, Price) as NewTable
+WHERE RN = 1;
 ```
 
-![Image  16](./images/image_16.png)
-
-Looks like the `white` race has most absenties, this does not give a clear picture, when you tend to get the mean. May be because they are the most in our dataset.
-
-To prove this further, lets get the count of each race as well.
+#### 15. What is the distribution of purchase types for each car model?
 
 ```sql
+-- What is the distribution of purchase types for each car model?
 SELECT
-	RaceDesc,
-    SUM(Absences) AS absence_cnt,
-    COUNT(RaceDesc) as race_cnt
-FROM HR_data
-GROUP BY RaceDesc
-ORDER BY absence_cnt DESC;
+	Model,
+	Purchase_type,
+	COUNT(*) AS Frequency
+FROM CarSales
+GROUP BY Model, Purchase_type
+ORDER BY Model, Frequency DESC;
 ```
 
-![Image  16_2](./images/image_16_2.png)
-
-The data is positively skewed, in such a case, the mean is not the best measure for central tendency. The `median` is much preferred in such case.
-
-**Statistical Reading sources**
-
-1. [Measures of central tendencies](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-central-tendency#:~:text=In%20a%20skewed%20distribution%2C%20the,the%20middle%20of%20the%20distribution.)
-
-#### 17. Which department has the best employee satisfactions?
+#### 15. Which purchase type is most commonly used in each country?
 
 ```sql
--- Which department has the best employee satisfactions?
-SELECT
-	Department,
-    ROUND(AVG(EmpSatisfaction), 2) AS avg_empl_satisfaction
-FROM HR_data
-GROUP BY Department
-ORDER BY avg_empl_satisfaction DESC;
+-- Which purchase type is most commonly used in each country?
+SELECT Country, Purchase_type
+FROM (SELECT Country, Purchase_type, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY count(*) DESC) AS RN
+		FROM CarSales
+		GROUP BY Country, Purchase_type) as NewTable
+WHERE RN = 1;
 ```
 
-![Image  17](./images/image_17.png)
-
-Software engineers tend to be the most satisfied employees. What could be the reason for this? Salary?
-
-![Image  17_2](./images/image_17_2.png)
-
-Well, average salary isn't the case. Does the saying, **"money can't buy happiness"** true? There must be some other parameter affecting this. A leave this to open discussion.
-
-
-#### 18. Which race has the most satisfied employees?
+#### 17. Which car model generated the highest gross profit in Germany?
 
 ```sql
--- Which race has the most satisfied employees?
+-- Which car model generated the highest gross profit in Germany?
 SELECT
-	RaceDesc,
-    ROUND(AVG(EmpSatisfaction), 2) AS avg_empl_satisfaction,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY RaceDesc
-ORDER BY avg_empl_satisfaction DESC;
+	Model,
+	SUM(Gross_Profit) AS total_Prof
+FROM CarSales
+WHERE Country = 'Germany'
+GROUP BY Model
+ORDER BY total_Prof DESC;
 ```
 
-![Image  18](./images/image_18.png)
-
-Using `Average` in the cases may not give us a clearer picture as they counts of each category is different. `Median` is probably a better measure for this. Using SQL for `median` calculation is abit of work. Keep this in mind, `average` is not the best measure in such a case and all the cases when I applied the mean.
-
-
-#### 19. What is the employee satisfaction levels for married/single people?
+#### 18. How many sales transactions were made for each car model in the US?
 
 ```sql
--- What is the employee satisfaction levels for married/single people?
+-- How many sales transactions were made for each car model in the US?
 SELECT
-	MaritalDesc,
-    ROUND(AVG(EmpSatisfaction), 2) AS avg_empl_satisfaction,
-    AVG(Salary) AS avg_salary
-FROM HR_data
-GROUP BY MaritalDesc
-ORDER BY avg_empl_satisfaction DESC;
+	Model,
+	Country,
+	COUNT(id) AS us_no_trnascations
+FROM CarSales
+WHERE Country = 'US'
+GROUP BY Model, Country;
 ```
 
-Again `mean` as a measure of central tendency does not give a clear picture in this case as each `MaritalDesc` section is different in count.
-
-![Image  19](./images/image_19.png)
-
-
-#### 20. Which state has the most satisfied employees?
+#### 19. What is the total gross profit for each car model in the dataset?
 
 ```sql
--- Which state has the most satisfied employees?
+-- What is the total gross profit for each car model in the dataset?
 SELECT
-	State,
-    ROUND(AVG(EmpSatisfaction), 2) AS avg_empl_satisfaction,
-    AVG(Salary) AS avg_salary,
-    COUNT(State) AS state_cnt
-FROM HR_data
-GROUP BY State
-ORDER BY avg_empl_satisfaction DESC;
+	Model,
+	SUM(Gross_Profit) AS total_Profit
+FROM CarSales
+GROUP BY Model
+ORDER BY total_Profit DESC;	
 ```
 
-![Image  20](./images/image_20.png)
-
-#### 22. What is the average age of employees in each department?
-
+#### 20. Which country had the highest average sales for the car models sold?
 
 ```sql
--- What is the average age of employees in each department?
+-- Which country had the highest average sales for the car models sold?
 SELECT
-	Department,
-    AVG(ROUND(DATEDIFF(NOW(), DOB) / 365, 1)) AS avg_age
-FROM HR_data
-GROUP BY Department;
+	TOP 1 Country,
+	Model,
+	ROUND(AVG(Price),2) AS avg_sal
+FROM CarSales
+GROUP BY Country, Model
+ORDER BY avg_sal;	
 ```
 
-![Image  22](./images/image_22.png)
+#### 22. What is the most sold car Model in each country?
 
+```sql
+-- What is the most sold car Model in each country?
+SELECT Country, Model
+FROM (SELECT Country, Model, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY Model DESC) AS RN
+	FROM CarSales) as sales_model
+WHERE RN = 1;
+```
 
-#### 23. Average age by each race?
+#### 23. What was the most common purchase type for Model S in Germany?
+
+```sql
+-- What was the most common purchase type for Model S in Germany?
+SELECT
+	Model,
+	Purchase_type,
+	COUNT(Purchase_type) AS no_Pur_type
+FROM CarSales
+WHERE Country = 'Germany' AND Model = 'Model S'
+GROUP BY Model, Purchase_type
+ORDER BY no_Pur_type DESC;	
+```
+
+#### 24. What is the total gross profit generated from each car version in the US?
+
+```sql
+-- What is the total gross profit generated from each car version in the US?
+SELECT
+	Model,
+	SUM(Gross_Profit) AS US_totalprofit
+FROM CarSales
+WHERE Country = 'US'
+GROUP BY Model;		
+```
+
+#### 24. How many sales transactions were made for each car version in the US?
+
+```sql
+-- How many sales transactions were made for each car version in the US?
+SELECT
+	Model,
+	COUNT(id) AS no_sal_trans
+FROM CarSales
+WHERE Country = 'US'
+GROUP BY Model;		
+```
+
+#### 24. How does the average price vary for different purchase types in the US?
+
+```sql
+-- How does the average price vary for different purchase types in the US?
+SELECT
+	Purchase_type,
+ 	ROUND(AVG(Price), 3) AS avg_sales
+FROM CarSales
+GROUP BY Purchase_type;				
+```
+
+#### 24. what is the monthly gross profit for each month?
+
+```sql
+-- what is the monthly gross profit for each month?
+WITH monthly_profit AS(
+    SELECT Gross_Profit, 
+    	CASE 
+			WHEN right(Period, 2) = '01' THEN 'January'
+    		WHEN right(Period, 2) = '02' THEN 'February'
+    		WHEN right(Period, 2) = '03' THEN 'March'
+    		WHEN right(Period, 2) = '04' THEN 'April'
+    		WHEN right(Period, 2) = '05' THEN 'May'
+    		WHEN right(Period, 2) = '06' THEN 'June'
+    		ELSE Period 
+		END AS Month
+    	FROM CarSales
+    )
+    SELECT Month, sum(Gross_Profit) AS 'monthly_profit'
+    FROM monthly_profit
+    GROUP BY Month
+    ORDER BY 'monthly_profit' DESC;			
+```
+
+#### 24. Calculating the average car price and gross profit
+#### Calculating the standard deviation of price and gross profits
 
 ```sql
 SELECT
-	RaceDesc,
-    AVG(ROUND(DATEDIFF(NOW(), DOB) / 365, 1)) AS avg_age
-FROM HR_data
-GROUP BY RaceDesc
-ORDER BY avg_age DESC;
+  AVG(Price) AS Price_Mean,
+  STDEV(Price) AS Price_StdDev,
+  AVG(Gross_Profit) AS Profit_Mean,
+  STDEV(Gross_Profit) AS Profit_StdDev
+FROM CarSales; 			
 ```
 
-![Image  23](./images/image_23.png)
-
-
-#### 24. What is the average age of each position?
+#### 24. Is there a correlation between car price and gross profit?
 
 ```sql
--- What is the average age of each position?
-SELECT
-	Position,
-    AVG(ROUND(DATEDIFF(NOW(), DOB) / 365, 1)) AS avg_age
-FROM HR_data
-GROUP BY Position
-ORDER BY avg_age DESC;
+-- Is there a correlation between car price and gross profit?
+SELECT 
+  (SUM(Price * Gross_Profit) - COUNT(*) * AVG(Price) * AVG(Gross_Profit)) /
+  (COUNT(*) * STDEV(Price) * STDEV(Gross_Profit)) AS CorrelationCoefficient
+FROM CarSales;			
 ```
 
-![Image  24](./images/image_24.png)
+** Yes, there is a correlation between car price and gross profit.
+ The correlation coefficient of 0.1201 between car price and gross profit suggests a relatively weak positive correlation between these two variables. 
+ This means that there is a slight tendency for higher car prices to be associated with slightly higher gross profits, but the relationship is not very strong. 
+ The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent. **
