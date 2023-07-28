@@ -624,3 +624,7 @@ Yes, there is a correlation between car price and gross profit.
  The correlation coefficient of 0.1201 between car price and gross profit suggests a relatively weak positive correlation between these two variables. 
  This means that there is a slight tendency for higher car prices to be associated with slightly higher gross profits, but the relationship is not very strong. 
  The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent.
+
+
+## Code
+For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis%20SQL/Tesla_Car_Sales_Analysis.sql) file.
