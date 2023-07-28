@@ -5,12 +5,13 @@
 
 The primary objective of this sales data analytics project is to uncover valuable insights and patterns within Tesla car's sales data, ultimately leading to enhanced sales performance. Through a comprehensive analysis of sales data across various regions, products, and time frames, we aim to identify top-performing products, high-performing regions, and the most profitable time periods. By leveraging this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth.
 
+
+
 ## Data Description
 
 The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-
-#### Data Dectionary
+### Data Dectionary
 
 This dataset contains 7 columns and 924 rows.
 
@@ -27,6 +28,27 @@ This dataset contains 7 columns and 924 rows.
 
 
 
+## Methodology 
+
+1. **Data Collection:**
+ - The dataset employed in this analysis was obtained from the Kaggle website.
+
+2. **Data Understanding:**
+
+ - Explored the dataset's structure, including available columns, data types, and data dictionary to gain familiarity.
+ - Identified and clarified the specific business questions or objectives that require insights from the dataset.
+
+3. **Data Assessment:** 
+  - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
+
+4. **Data Cleaning and Data Validation Process:**
+my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:
+  - First, I cleaned the data in Excel and adjusted the date format.
+  - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
+  - Chose appropriate `data types` for accurate storage and manipulation of data.
+  - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
+ 
+     
 
 ## Exploratory Data Analysis (EDA):
 
@@ -80,59 +102,9 @@ This dataset contains 7 columns and 924 rows.
 46. Calculating the standard deviation of price and gross profits
 47. Is there a correlation between car price and gross profit?
 
-### Procedures Followed
+## Query types used:
 
-1.  #### Data Cleaning
 
-    1. Delete unwanted columns, the following columns will be deleted as they will not be important in the analysis project.
-
-    1. `EmpID`
-    1. `MarriedID`
-    1. `MaritalStatusID`
-    1. `GenderID`
-    1. `EmpStatusID`
-    1. `DeptID`
-    1. `PerfScoreID`
-    1. `FromDiversityJobFairID`
-    1. `Employee_Name`
-    1. `ManagerName`
-    1. `ManagerID`
-    1. `Zip`
-    1. `PositionID`
-    1. `Zip`
-
-2.  #### Database creation
-
-    1. Drop all the unwanted columns listed above. This should be done in the CSV file.
-    2. Create a database with the remaing columns:
-
-| Column Name                | Column Datatype |
-| :------------------------- | :-------------: |
-| Employee_Name              |  VARCHAR(100)   |
-| Salary                     | DECIMAL(10, 2)  |
-| Position                   |  VARCHAR(100)   |
-| State                      |  VARCHAR(100)   |
-| DOB                        |      DATE       |
-| Sex                        |   VARCHAR(1)    |
-| MaritalDesc                |  VARCHAR(100)   |
-| CitizenDesc                |  VARCHAR(100)   |
-| HispanicLatino             |   VARCHAR(10)   |
-| RaceDesc                   |   VARCHAR(30)   |
-| DateofHire                 |      DATE       |
-| DateofTermination          |   DATE & NULL   |
-| TermReason                 |  VARCHAR(100)   |
-| EmploymentStatus           |  VARCHAR(100)   |
-| Department                 |  VARCHAR(100)   |
-| ManagerName                |  VARCHAR(100)   |
-| ManagerID                  |       INT       |
-| RecruitmentSource          |  VARCHAR(100)   |
-| PerformanceScore           |  VARCHAR(100)   |
-| EngagementSurvey           |      FLOAT      |
-| EmpSatisfaction            |       INT       |
-| SpecialProjectsCount       |       INT       |
-| LastPerformanceReview_Date |      DATE       |
-| DaysLateLast30             |       INT       |
-| Absences                   |       INT       |
 
 3. #### Writing Scripts For Questions Listed
 
