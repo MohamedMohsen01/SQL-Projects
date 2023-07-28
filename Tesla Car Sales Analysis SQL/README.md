@@ -103,10 +103,27 @@ This dataset contains 7 columns and 924 rows.
 47. Is there a correlation between car price and gross profit?
 
 ## Query types used:
+- ALTET TABLE
+- ALTER COLUMN
+- ADD
+- IDENTITY()
+- Aggregation Functions
+- MIN/MAX
+- SUM
+- COUNT(DISTINCT)
+- AVG
+- ROW_NUMBER()
+- ROUND
+- Where between
+- CASE statement 
+- CTEs
+- STDEV
+- GROUP BY
+- ORDER BY 
 
 
 
-3. #### Writing Scripts For Questions Listed
+3. #### Writing Scripts For some Questions Listed
 
 #### 1. To understand the most paid career
 
