@@ -52,7 +52,7 @@ This dataset contains 7 columns and 924 rows.
 
 ## Exploratory Data Analysis (EDA):
 
-##### Some of the business questions I've answered based on the data:#####
+##### Some of the business questions I've answered based on the data: #####
 
 1.  Determine the number of unique car models in the data?
 2.  What is the total number of sales transactions in the dataset?
