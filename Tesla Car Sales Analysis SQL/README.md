@@ -31,22 +31,22 @@ This dataset contains 7 columns and 924 rows.
 ## Methodology 
 
 1. **Data Collection:**
- - The dataset employed in this analysis was obtained from the Kaggle website.
+   - The dataset employed in this analysis was obtained from the Kaggle website.
 
 2. **Data Understanding:**
 
- - Explored the dataset's structure, including available columns, data types, and data dictionary to gain familiarity.
- - Identified and clarified the specific business questions or objectives that require insights from the dataset.
+   - Explored the dataset's structure, including available columns, data types, and data dictionary to gain familiarity.
+   - Identified and clarified the specific business questions or objectives that require insights from the dataset.
 
 3. **Data Assessment:** 
-  - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
+   - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
 
 4. **Data Cleaning and Data Validation Process:**
 my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:
-  - First, I cleaned the data in Excel and adjusted the date format.
-  - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
-  - Chose appropriate `data types` for accurate storage and manipulation of data.
-  - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
+   - First, I cleaned the data in Excel and adjusted the date format.
+   - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
+   - Chose appropriate `data types` for accurate storage and manipulation of data.
+   - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
  
      
 
