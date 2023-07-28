@@ -304,7 +304,7 @@ GROUP BY product_line
 ORDER BY total_qty DESC;
 ```
 
-#### 6. What is the total revenue for each month?
+#### 7. What is the total revenue for each month?
 
 ```sql
 -- What is the total revenue for each month?
@@ -316,7 +316,7 @@ GROUP BY month_name
 ORDER BY total_revenue DESC;
 ```
 
-#### 6. Which month had the highest Cost of Goods Sold (COGS)?
+#### 8. Which month had the highest Cost of Goods Sold (COGS)?
 
 ```sql
 -- Which month had the highest Cost of Goods Sold (COGS)?
@@ -328,7 +328,7 @@ GROUP BY month_name
 ORDER BY total_cogs DESC;
 ```
 
-#### 6. Which product line generated the highest revenue?
+#### 9. Which product line generated the highest revenue?
 
 ```sql
 -- Which product line generated the highest revenue?
@@ -340,6 +340,31 @@ GROUP BY product_line
 ORDER BY total_revenue DESC;
 ```
 
+#### 9. Which city had the highest revenue?
+
+```sql
+--Which city had the highest revenue?
+SELECT TOP 1
+	branch,
+	city,
+	SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY city, branch 
+ORDER BY total_revenue;
+```
+
+
+#### 10. Which product line had the highest Value Added Tax (VAT)?
+
+```sql
+--Which product line had the highest Value Added Tax (VAT)?
+SELECT
+	product_line,
+	AVG(VAT) as avg_tax
+FROM sales
+GROUP BY product_line
+ORDER BY avg_tax DESC;
+```
 
 
 
