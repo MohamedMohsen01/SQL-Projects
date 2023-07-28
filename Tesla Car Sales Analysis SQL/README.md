@@ -331,10 +331,10 @@ GROUP BY Model, Purchase_type
 ORDER BY Model, Frequency DESC;	
 ```
 
-#### 18. --What is the average price of all cars sold in the US?
+#### 18. What is the average price of all cars sold in the US?
 
 ```sql
---  What is the distribution of purchase types for each car model?
+-- What is the average price of all cars sold in the US?
 SELECT
 	Country,
 	ROUND(AVG(Price),3) AS US_avg_Price
@@ -343,10 +343,10 @@ WHERE Country = 'US'
 Group BY Country;
 ```
 
-#### 19. Which car version had the highest price in the US?
+#### 19. Which car model had the highest price in the US?
 
 ```sql
--- Which car version had the highest price in the US?
+-- Which car model had the highest price in the US?
 SELECT
 	Model,
 	ROUND(SUM(Price), 2) AS US_total_price
@@ -367,7 +367,6 @@ FROM CarSales
 WHERE Country = 'Australia'
 GROUP BY Country;			
 ```
-
 
 #### 21. Which country had the highest number of cash purchases?
 
@@ -393,7 +392,6 @@ FROM CarSales
 GROUP BY Purchase_type
 ORDER BY Total_Sales DESC;
 ```
-
 
 #### 23. What is the distribution of car prices in the US for January 2016?
 
