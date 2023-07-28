@@ -58,8 +58,30 @@ This dataset contains sales transactions from three different branches of Walmar
 > - created a column named `month_name` to extract the month of the year for each transaction (Jan, Feb, Mar). This data will assist in identifying the months with the highest sales and profitability.
 
 
+
+
+## Analysis Approach
+
+**Product Analysis:**
+
+- Utilized SQL to conduct in-depth analysis of product lines to identify top-performing and underperforming segments.
+- Identified areas for improvement within each product line.
+
+**Sales Analysis:**
+
+- Leveraged SQL to analyze sales trends, providing insights into product performance and effectiveness of sales strategies.
+- Implemented SQL queries to measure the impact of different sales strategies and recommend modifications for increased sales.
+
+**Customer Analysis:**
+
+- Uncovered customer segments and their purchasing patterns.
+- Utilized SQL queries to extract actionable insights, enabling targeted marketing efforts and optimizing customer satisfaction.
+
+
+
+
 ## Exploratory Data Analysis (EDA): 
-Some of the business questions I've answered based on the data:
+Some of the business questions I've answered based on the dataset:
 
 ### Generic Questions
 1. How many unique cities does the data have?
@@ -100,23 +122,6 @@ Some of the business questions I've answered based on the data:
 10. Which day of the week has the highest average ratings for each branch?
 
 
-## Analysis Approach
-
-**Product Analysis:**
-
-- Utilized SQL to conduct in-depth analysis of product lines to identify top-performing and underperforming segments.
-- Identified areas for improvement within each product line.
-
-**Sales Analysis:**
-
-- Leveraged SQL to analyze sales trends, providing insights into product performance and effectiveness of sales strategies.
-- Implemented SQL queries to measure the impact of different sales strategies and recommend modifications for increased sales.
-
-**Customer Analysis:**
-
-- Uncovered customer segments and their purchasing patterns.
-- Utilized SQL queries to extract actionable insights, enabling targeted marketing efforts and optimizing customer satisfaction.
-
 
 ## Revenue And Profit Calculations
 
@@ -131,6 +136,126 @@ Revenue = VAT + COGS
 Profit = revenue - COGS 
 
 Profit Margin % = (total profit/ total revenue)*100 
+
+
+
+
+## Writing SQL scripts to address various questions from the provided list.
+
+
+#### 1. Let's ensure the data is usable for analysis by validating and adding necessary constraints.
+
+```sql
+USE WalmartSales
+
+-- Adding primary key constraint on invoice_ID column
+ALTER TABLE sales
+ADD CONSTRAINT PK_sales PRIMARY KEY (invoice_ID);
+
+-- Altering invoice_ID column
+ALTER TABLE sales
+ALTER COLUMN invoice_ID VARCHAR(30) NOT NULL;
+
+-- Altering branch column
+ALTER TABLE sales
+ALTER COLUMN branch VARCHAR(5) NOT NULL;
+
+-- Altering city column
+ALTER TABLE sales
+ALTER COLUMN city VARCHAR(30) NOT NULL;
+
+
+-- Altering customer_type column
+ALTER TABLE sales
+ALTER COLUMN customer_type VARCHAR(30) NOT NULL;
+
+
+-- Altering gender column
+ALTER TABLE sales
+ALTER COLUMN gender VARCHAR(10) NOT NULL;
+
+-- Altering product_line column
+ALTER TABLE sales
+ALTER COLUMN product_line VARCHAR(100) NOT NULL;
+
+-- Altering unit_price column
+ALTER TABLE sales
+ALTER COLUMN unit_price DECIMAL(10,2) NOT NULL;
+
+-- Altering quantity column
+ALTER TABLE sales
+ALTER COLUMN quantity INT NOT NULL;
+
+-- Altering VAT column
+ALTER TABLE sales
+ALTER COLUMN VAT FLOAT NOT NULL;
+
+-- Altering Revenue column
+ALTER TABLE sales
+ALTER COLUMN Revenue DECIMAL(12,4) NOT NULL;
+
+-- Altering date column
+ALTER TABLE sales
+ALTER COLUMN date DATETIME NOT NULL;
+
+-- Altering time column
+ALTER TABLE sales
+ALTER COLUMN time TIME NOT NULL;
+
+-- Altering payment_method column
+ALTER TABLE sales
+ALTER COLUMN payment_method VARCHAR(15) NOT NULL;
+
+-- Altering cogs column
+ALTER TABLE sales
+ALTER COLUMN cogs DECIMAL(10,2) NOT NULL;
+
+-- Altering Profit_Margin column
+ALTER TABLE sales
+ALTER COLUMN Profit_Margin FLOAT NOT NULL;
+
+-- Altering Profit column
+ALTER TABLE sales
+ALTER COLUMN Profit DECIMAL(12,4) NOT NULL;
+
+-- Altering rating column
+ALTER TABLE sales
+ALTER COLUMN rating FLOAT NOT NULL;			
+```
+
+
+#### 1. Let's ensure the data is usable for analysis by validating and adding necessary constraints.
+
+```sql
+  -- Let's add the time_of_day column
+SELECT
+	time,
+	(CASE
+		WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        ELSE 'Evening'
+    END) AS time_of_day
+FROM sales;
+
+ALTER TABLE sales ADD time_of_day VARCHAR(20);
+
+
+UPDATE sales
+SET time_of_day = (
+	CASE
+		WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        ELSE 'Evening'
+    END
+);
+```
+
+
+
+
+
+
+
 
 
 ## Code
