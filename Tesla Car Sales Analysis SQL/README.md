@@ -196,7 +196,9 @@ ORDER BY COUNT(*) DESC;
 
 ```sql
 -- What is the car version with the highest price?
-SELECT TOP 1 Version, Price
+SELECT
+	TOP 1 Version,
+	 Price
 FROM CarSales
 ORDER BY Price DESC;
 ```
