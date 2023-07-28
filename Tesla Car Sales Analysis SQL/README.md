@@ -1,45 +1,84 @@
-## HR Data Analysis Project
+## Tesla Car Sales Data Analysis
 
-### About Data
 
-This data is data from Human Resource Management Office. 
+## Project Overview:
 
-### Introduction To MySQL
+The primary objective of this sales data analytics project is to uncover valuable insights and patterns within Tesla car's sales data, ultimately leading to enhanced sales performance. Through a comprehensive analysis of sales data across various regions, products, and time frames, we aim to identify top-performing products, high-performing regions, and the most profitable time periods. By leveraging this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth.
 
-If you are a complete beginner on MySQL, this tutorial series on my channel ([Code With Prince](https://youtube.com/playlist?list=PLU7aW4OZeUzyfoucs0NJ1DN6cXOuZ-uUa)) can be of great help to you to understanding MySQL for a beginner and all the code in this project. 
+## Data Description
 
-If you wish to collaborate with me on any project, you can get in touch with me through email: [codingshark206@gmail.com](codingshark206@gmail.com).
+The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-To support the work that I do such as this one, you can [buy me coffee](https://www.buymeacoffee.com/princez3). Thanks and enjoy.
 
-### Objectives Of Analysis
+#### Data Dectionary
 
-**The main purpose of this analysis is to answer the following questions to gain a deeper understanding of the data.**
+This dataset contains 7 columns and 924 rows.
 
-1. To understand the most paid career?
-2. What is the average salary of each category?
-3. How does gender affect the salary of an employee?
-4. How does race(white/black/Asian...) affect the salary of an employee?
-5. How does race(white/black/Asian...) affect employee position?
-6. How does absence affect the salary of an individual?
-7. What is the most common recruitement source and how does recruitement source affect salary and `EmpSatisfaction`?
-8. What is the categorization count for `EmploymentStatus`?
-9. What is the average salary based on department?
-10. Which state has the most paid salary?
-11. What is the most common reason for termination?
-12. What is the most common reason for termination by race?
-13. What is the most common `EmploymentStatus`?
-14. Which recruitment source give employees with best performance score?
-15. Which department has the most absenties?
-16. Which race has the most absenties?
-17. Which department has the best employee satisfactions?
-18. Which race has the most satisfied employees?
-19. What is the employee satisfaction levels for married/single people?
-20. Which state has the most satisfied employees?
-21. Which state are you likely to get a job(Position) by category?
-22. What is the average age of employees in each department?
-23. Average age by each race?
-24. What is the average age of each position?
+| Column Name                | Column Datatype |
+| :------------------------- | :-------------: |
+| Model                      |  VARCHAR(50)    |
+| Period                     |     DATE        |
+| Country                    |  VARCHAR(50)    |
+| Purchase_type              |  VARCHAR(50)    |
+| Version                    |  VARCHAR(50)    |
+| Price                      |  DECIMAL(10,3)  |
+| Gross_Profit               |  DECIMAL(10,3)  |
+
+
+
+
+
+## Exploratory Data Analysis (EDA):
+
+**Some of the business questions I've answered based on the data:**
+
+1.  Determine the number of unique car models in the data?
+2.  What is the total number of sales transactions in the dataset?
+3.  Which purchase type is most commonly used by people?
+4.  Which car version is the most popular among buyers?
+5.  What is the cumulative gross profit for both the first and second quarters of the year 2016?
+6.  What is the total sales for the first and second quarters of the year 2016?
+7.  What is the most frequent purchase type?
+8.  What is the car version with the highest price?
+9.  Which car version is generating the highest total sales?
+10. How does the average gross profit vary across different car versions for each country?
+11. what is the most sold car version in each country?
+12. Which car version is generating the highest total gross profit?
+13. Which Tesla car models do we have in our dataset?
+14. What is the total gross profit and sales for each country?
+15. Which model has the highest total gross profit?
+16. What is the average sales price for each car model?
+17. How many car models were sold in the US in January 2016?
+18. Which country had the highest demand for Tesla cars?
+19. How many unique car models were sold in Australia in January 2016?
+20. What was the total gross profit generated from all sales in Germany?
+21. What is the distribution of purchase types for each car model?
+22. What is the average price of all cars sold in the US?
+23. Which car version had the highest price in the US?
+24. Which car version had the highest price in Australia?
+25. What was the total sales generated from all sales in Australia?
+26. Which country had the highest total sales?
+27. Which country had the highest number of cash purchases?
+28. What is the total sales for each purchase type?
+29. What is the average gross profit for each purchase type?
+30. How many different car versions were sold in the US?
+31. What is the distribution of car prices in the US for January 2016?
+32. What is the highest car price in each country
+33. Which purchase type is most commonly used in each country?
+34. Which car model generated the highest gross profit in Germany?
+35. How many sales transactions were made for each car model in the US?
+36. What is the total gross profit for each car model in the dataset?
+37. Which country had the highest average sales for the car models sold?
+38. what is the most sold car Model in each country
+39. What was the most common purchase type for Model S in Germany?
+40. What is the total gross profit generated from each car version in the US?
+41. How many sales transactions were made for each car version in the US?
+42. What was the most popular car model in terms of sales volume?
+43. How does the average price vary for different purchase types in the US?
+44. What is the monthly gross profit for each month?
+45. Calculating the average car price and gross profit
+46. Calculating the standard deviation of price and gross profits
+47. Is there a correlation between car price and gross profit?
 
 ### Procedures Followed
 
