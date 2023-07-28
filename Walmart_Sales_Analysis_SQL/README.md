@@ -140,7 +140,7 @@ Profit Margin % = (total profit/ total revenue)*100
 
 
 
-## Writing SQL scripts to address various questions from the provided list.
+## Writing SQL scripts to show data preperation and to address various questions from the provided list.
 
 
 #### 1. Let's ensure the data is usable for analysis by validating and adding necessary constraints.
@@ -224,7 +224,7 @@ ALTER COLUMN rating FLOAT NOT NULL;
 ```
 
 
-#### 1. Let's ensure the data is usable for analysis by validating and adding necessary constraints.
+#### 2. Let's add the time_of_day column.
 
 ```sql
   -- Let's add the time_of_day column
@@ -251,8 +251,36 @@ SET time_of_day = (
 ```
 
 
+#### 3. Adding day_name column
+
+```sql
+-- Adding day_name column
+SELECT
+	date,
+	FORMAT(date, 'dddd') as day_name
+FROM sales;
+
+ALTER TABLE sales ADD day_name VARCHAR(10);
+
+UPDATE sales
+SET day_name = FORMAT(date, 'dddd');
+```
 
 
+#### 4. Adding month_name column
+
+```sql
+-- Adding month_name column
+SELECT
+	date,
+	DATENAME(MONTH, date) AS month_name
+FROM sales;
+
+ALTER TABLE sales ADD month_name VARCHAR(10);
+
+UPDATE sales
+SET month_name = DATENAME(MONTH, date);
+```
 
 
 
