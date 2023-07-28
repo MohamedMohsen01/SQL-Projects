@@ -283,6 +283,63 @@ SET month_name = DATENAME(MONTH, date);
 ```
 
 
+#### 5. How many unique product lines are included in the data?
+
+```sql
+-- Adding month_name column
+SELECT 
+	DISTINCT product_line
+FROM sales;
+```
+
+#### 6. Which product line has the highest sales volume?
+
+```sql
+-- Which product line has the highest sales volume?
+SELECT
+	product_line,
+	SUM(quantity) as total_qty
+FROM sales
+GROUP BY product_line
+ORDER BY total_qty DESC;
+```
+
+#### 6. What is the total revenue for each month?
+
+```sql
+-- What is the total revenue for each month?
+SELECT
+	month_name AS month,
+	SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY month_name 
+ORDER BY total_revenue DESC;
+```
+
+#### 6. Which month had the highest Cost of Goods Sold (COGS)?
+
+```sql
+-- Which month had the highest Cost of Goods Sold (COGS)?
+SELECT TOP 1
+	month_name AS month,
+	SUM(cogs) AS total_cogs
+FROM sales
+GROUP BY month_name 
+ORDER BY total_cogs DESC;
+```
+
+#### 6. Which product line generated the highest revenue?
+
+```sql
+-- Which product line generated the highest revenue?
+SELECT TOP 1
+	product_line,
+	SUM(revenue) as total_revenue
+FROM sales
+GROUP BY product_line
+ORDER BY total_revenue DESC;
+```
+
 
 
 
