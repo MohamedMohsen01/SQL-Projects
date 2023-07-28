@@ -31,7 +31,7 @@ This dataset contains 7 columns and 924 rows.
 ## Methodology:
 
 1. **Data Collection:**
-  - The dataset employed in this analysis was obtained from the Kaggle website.
+   - The dataset used for this analysis was sourced from the Kaggle website.
 
 2. **Data Understanding:**
 
