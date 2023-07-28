@@ -626,5 +626,5 @@ Yes, there is a correlation between car price and gross profit.
  The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent.
 
 
-## Code
+## Code:
 For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis%20SQL/Tesla_Car_Sales_Analysis.sql) file.
