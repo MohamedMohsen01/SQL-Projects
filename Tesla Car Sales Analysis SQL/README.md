@@ -85,21 +85,21 @@ This dataset contains 7 columns and 924 rows.
 29. What is the average gross profit for each purchase type?
 30. How many different car versions were sold in the US?
 31. What is the distribution of car prices in the US for January 2016?
-32. What is the highest car price in each country
+32. What is the highest car price in each country?
 33. Which purchase type is most commonly used in each country?
 34. Which car model generated the highest gross profit in Germany?
 35. How many sales transactions were made for each car model in the US?
 36. What is the total gross profit for each car model in the dataset?
 37. Which country had the highest average sales for the car models sold?
-38. what is the most sold car Model in each country
+38. what is the most sold car Model in each country?
 39. What was the most common purchase type for Model S in Germany?
 40. What is the total gross profit generated from each car version in the US?
 41. How many sales transactions were made for each car version in the US?
 42. What was the most popular car model in terms of sales volume?
 43. How does the average price vary for different purchase types in the US?
 44. What is the monthly gross profit for each month?
-45. Calculating the average car price and gross profit
-46. Calculating the standard deviation of price and gross profits
+45. What is the average car price and gross profit?
+46. What is the standard deviation of price and gross profits?
 47. Is there a correlation between car price and gross profit?
 
 
@@ -110,14 +110,14 @@ This dataset contains 7 columns and 924 rows.
 - ALTER COLUMN
 - ADD
 - IDENTITY()
-- Aggregation Functions
+- Aggregate Functions
 - MIN/MAX
 - SUM
 - COUNT(DISTINCT)
 - AVG
 - ROW_NUMBER()
 - ROUND
-- WHERE BETWEEN
+- WHERE 
 - CASE statement 
 - CTEs
 - STDEV
@@ -128,7 +128,7 @@ This dataset contains 7 columns and 924 rows.
 
 3. ## Writing SQL scripts to address various questions from the provided list.
 
-#### 1. What date range are we dealing with in this dataset?
+#### 1. Let's check What date range are we dealing with in this dataset?
 
 ```sql
 -- What date range are we dealing with in this dataset?
@@ -193,7 +193,28 @@ GROUP BY Purchase_type
 ORDER BY COUNT(*) DESC;
 ```
 
-#### 7. How does the average gross profit vary across different car versions for each country?
+#### 7. What is the car version with the highest price?
+
+```sql
+-- What is the car version with the highest price?
+SELECT TOP 1 Version, Price
+FROM CarSales
+ORDER BY Price DESC;
+```
+
+#### 8. Which car version is generating the highest total sales?
+
+```sql
+-- Which car version is generating the highest total sales?
+SELECT
+	TOP 1 Version,
+	SUM(Price) AS Total_Sales
+FROM CarSales
+GROUP BY Version	
+ORDER BY Total_Sales DESC;
+```
+
+#### 9. How does the average gross profit vary across different car versions for each country?
 
 ```sql
 -- How does the average gross profit vary across different car versions for each country?
@@ -206,7 +227,7 @@ GROUP BY Country, Version
 ORDER BY Country, Avg_Gross_Profit DESC;
 ```
 
-#### 8. what is the most sold car version in each country?
+#### 10. what is the most sold car version in each country?
 
 ```sql
 -- what is the most sold car version in each country?
@@ -220,7 +241,19 @@ FROM (
 WHERE RN = 1;
 ```
 
-#### 9. What is the total gross profit and sales for each country?
+#### 11. Which car version is generating the highest total gross profit?
+
+```sql
+-- Which car version is generating the highest total gross profit?
+SELECT
+	TOP 1 Version,
+	SUM(Gross_Profit) AS Total_Profit
+FROM CarSales
+GROUP BY Version
+ORDER BY Total_Profit DESC;
+```
+
+#### 12. What is the total gross profit and sales for each country?
 
 ```sql
 -- What is the total gross profit and sales for each country?
@@ -233,7 +266,21 @@ GROUP BY Country
 ORDER BY Total_Gross_Profit DESC;
 ```
 
-#### 10. How many car models were sold in the US in January 2016?
+#### 13. What is the average sales price for each car model?
+
+```sql
+-- What is the average sales price for each car model?
+SELECT
+	Model,
+	AVG(Price) AS Avg_Price
+FROM CarSales
+GROUP BY Model
+ORDER BY Avg_Price DESC;
+
+```
+
+
+#### 14. How many car models were sold in the US in January 2016?
 
 ```sql
 -- How many car models were sold in the US in January 2016?
@@ -245,7 +292,57 @@ WHERE (Country = 'US') AND (Period = '2016-01')
 GROUP BY Model;		
 ```
 
-#### 11. Which car version had the highest price in the US?
+#### 15. Which country had the highest demand for Tesla cars?
+
+```sql
+-- Which country had the highest demand for Tesla cars?
+SELECT
+	Country,
+	COUNT(*) AS no_demand_cars
+FROM CarSales
+GROUP BY Country
+ORDER BY no_demand_cars DESC;	
+```
+
+
+#### 16. How many unique car models were sold in the Australia in January 2016?
+
+```sql
+-- How many unique car models were sold in the Australia in January 2016?
+SELECT
+	Model,
+	COUNT(DISTINCT Model) AS AU_no_models
+FROM CarSales
+WHERE (Country = 'Australia') AND (Period = '2016-01')
+GROUP BY Model;	
+```
+
+#### 17. What is the distribution of purchase types for each car model?
+
+```sql
+--  What is the distribution of purchase types for each car model?
+SELECT
+	Model,
+	Purchase_type,
+	COUNT(*) AS Frequency
+FROM CarSales
+GROUP BY Model, Purchase_type
+ORDER BY Model, Frequency DESC;	
+```
+
+#### 18. --What is the average price of all cars sold in the US?
+
+```sql
+--  What is the distribution of purchase types for each car model?
+SELECT
+	Country,
+	ROUND(AVG(Price),3) AS US_avg_Price
+FROM CarSales 
+WHERE Country = 'US'
+Group BY Country;
+```
+
+#### 19. Which car version had the highest price in the US?
 
 ```sql
 -- Which car version had the highest price in the US?
@@ -258,7 +355,20 @@ GROUP BY Model
 ORDER BY US_total_price DESC;
 ```
 
-#### 12. Which country had the highest number of cash purchases?
+#### 20. What was the total sales generated from all sales in Australia?
+
+```sql
+-- What was the total sales generated from all sales in Australia?
+SELECT
+	Country,
+	ROUND(SUM(Price),3) AS AU_total_sal
+FROM CarSales
+WHERE Country = 'Australia'
+GROUP BY Country;			
+```
+
+
+#### 21. Which country had the highest number of cash purchases?
 
 ```sql
 -- Which country had the highest number of cash purchases?
@@ -268,10 +378,23 @@ SELECT
 FROM CarSales
 WHERE Purchase_type = 'Cash purchase'
 GROUP BY Country
-ORDER BY no_Purchase DESC;;
+ORDER BY no_Purchase DESC;
 ```
 
-#### 13. What is the distribution of car prices in the US for January 2016?
+#### 22. What is the average gross profit for each purchase type?
+
+```sql
+-- What is the average gross profit for each purchase type?
+SELECT
+	Purchase_type,
+	AVG(Gross_Profit) AS Total_Sales
+FROM CarSales
+GROUP BY Purchase_type
+ORDER BY Total_Sales DESC;
+```
+
+
+#### 23. What is the distribution of car prices in the US for January 2016?
 
 ```sql
 -- What is the distribution of car prices in the US for January 2016?
@@ -284,7 +407,7 @@ GROUP BY Price
 ORDER BY Frequency DESC;
 ```
 
-#### 14. What is the highest car price in each country?
+#### 24. What is the highest car price in each country?
 
 ```sql
 -- What is the highest car price in each country?
@@ -295,7 +418,7 @@ FROM (SELECT Country, Price, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY SUM
 WHERE RN = 1;
 ```
 
-#### 15. What is the distribution of purchase types for each car model?
+#### 25. What is the distribution of purchase types for each car model?
 
 ```sql
 -- What is the distribution of purchase types for each car model?
@@ -308,7 +431,7 @@ GROUP BY Model, Purchase_type
 ORDER BY Model, Frequency DESC;
 ```
 
-#### 15. Which purchase type is most commonly used in each country?
+#### 26. Which purchase type is most commonly used in each country?
 
 ```sql
 -- Which purchase type is most commonly used in each country?
@@ -319,7 +442,7 @@ FROM (SELECT Country, Purchase_type, ROW_NUMBER() OVER(PARTITION BY Country ORDE
 WHERE RN = 1;
 ```
 
-#### 17. Which car model generated the highest gross profit in Germany?
+#### 27. Which car model generated the highest gross profit in Germany?
 
 ```sql
 -- Which car model generated the highest gross profit in Germany?
@@ -332,7 +455,7 @@ GROUP BY Model
 ORDER BY total_Prof DESC;
 ```
 
-#### 18. How many sales transactions were made for each car model in the US?
+#### 28. How many sales transactions were made for each car model in the US?
 
 ```sql
 -- How many sales transactions were made for each car model in the US?
@@ -345,7 +468,7 @@ WHERE Country = 'US'
 GROUP BY Model, Country;
 ```
 
-#### 19. What is the total gross profit for each car model in the dataset?
+#### 29. What is the total gross profit for each car model in the dataset?
 
 ```sql
 -- What is the total gross profit for each car model in the dataset?
@@ -357,7 +480,7 @@ GROUP BY Model
 ORDER BY total_Profit DESC;	
 ```
 
-#### 20. Which country had the highest average sales for the car models sold?
+#### 30. Which country had the highest average sales for the car models sold?
 
 ```sql
 -- Which country had the highest average sales for the car models sold?
@@ -370,7 +493,7 @@ GROUP BY Country, Model
 ORDER BY avg_sal;	
 ```
 
-#### 22. What is the most sold car Model in each country?
+#### 31. What is the most sold car Model in each country?
 
 ```sql
 -- What is the most sold car Model in each country?
@@ -380,10 +503,10 @@ FROM (SELECT Country, Model, ROW_NUMBER() OVER(PARTITION BY Country ORDER BY Mod
 WHERE RN = 1;
 ```
 
-#### 23. What was the most common purchase type for Model S in Germany?
+#### 32. What was the most common purchase type for 'Model S' in Germany?
 
 ```sql
--- What was the most common purchase type for Model S in Germany?
+-- What was the most common purchase type for 'Model S' in Germany?
 SELECT
 	Model,
 	Purchase_type,
@@ -394,7 +517,7 @@ GROUP BY Model, Purchase_type
 ORDER BY no_Pur_type DESC;	
 ```
 
-#### 24. What is the total gross profit generated from each car version in the US?
+#### 33. What is the total gross profit generated from each car version in the US?
 
 ```sql
 -- What is the total gross profit generated from each car version in the US?
@@ -406,7 +529,7 @@ WHERE Country = 'US'
 GROUP BY Model;		
 ```
 
-#### 24. How many sales transactions were made for each car version in the US?
+#### 34. How many sales transactions were made for each car version in the US?
 
 ```sql
 -- How many sales transactions were made for each car version in the US?
@@ -418,7 +541,20 @@ WHERE Country = 'US'
 GROUP BY Model;		
 ```
 
-#### 24. How does the average price vary for different purchase types in the US?
+#### 35. What was the most popular car model in terms of sales volume?
+
+```sql
+-- What was the most popular car model in terms of sales volume?
+SELECT
+	Model,
+	SUM(Price) AS total_sales
+FROM CarSales
+GROUP BY Model
+ORDER BY total_sales DESC;		
+```
+
+
+#### 36. How does the average price vary for different purchase types in the US?
 
 ```sql
 -- How does the average price vary for different purchase types in the US?
@@ -429,7 +565,7 @@ FROM CarSales
 GROUP BY Purchase_type;				
 ```
 
-#### 24. what is the monthly gross profit for each month?
+#### 37. what is the monthly gross profit for each month?
 
 ```sql
 -- what is the monthly gross profit for each month?
@@ -452,7 +588,7 @@ WITH monthly_profit AS(
     ORDER BY 'monthly_profit' DESC;			
 ```
 
-#### 24. Calculating the average car price and gross profit
+#### 38. Calculating the average car price and gross profit
 #### Calculating the standard deviation of price and gross profits
 
 ```sql
@@ -464,7 +600,7 @@ SELECT
 FROM CarSales; 			
 ```
 
-#### 24. Is there a correlation between car price and gross profit?
+#### 39. Is there a correlation between car price and gross profit?
 
 ```sql
 -- Is there a correlation between car price and gross profit?
