@@ -31,9 +31,9 @@ This dataset contains 7 columns and 924 rows.
 ## Methodology:
 
 1. **Data Collection:**
-   - The dataset used for this analysis was sourced from the Kaggle website.
+  - The dataset used for this analysis was sourced from the Kaggle website.
 
-2. **Data Understanding:**
+3. **Data Understanding:**
 
   - Explored the dataset's structure, including available columns, data types, and data dictionary to gain familiarity.
   - Identified and clarified the specific business questions or objectives that require insights from the dataset.
