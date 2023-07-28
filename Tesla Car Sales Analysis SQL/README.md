@@ -7,11 +7,11 @@ The primary objective of this sales data analytics project is to uncover valuabl
 
 
 
-## Data Description
+## Data Description:
 
 The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-### Data Dectionary
+### Data Dectionary:
 
 This dataset contains 7 columns and 924 rows.
 
@@ -28,7 +28,7 @@ This dataset contains 7 columns and 924 rows.
 
 
 
-## Methodology 
+## Methodology:
 
 1. **Data Collection:**
   - The dataset employed in this analysis was obtained from the Kaggle website.
