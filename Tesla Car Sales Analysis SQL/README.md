@@ -42,7 +42,7 @@ This dataset contains 7 columns and 924 rows.
    - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
 
 4. **Data Cleaning and Data Validation Process:**
-###### my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:
+##### my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:
    - First, I cleaned the data in Excel and adjusted the date format.
    - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
    - Chose appropriate `data types` for accurate storage and manipulation of data.
