@@ -9,9 +9,9 @@ The primary objective of this sales data analytics project is to uncover valuabl
 
 ## Data Description:
 
-The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
+The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-### Data Dectionary:
+### Data Dictionary:
 
 This dataset contains 7 columns and 924 rows.
 
@@ -42,7 +42,7 @@ This dataset contains 7 columns and 924 rows.
   - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
 
 4. **Data Cleaning and Data Validation Process:**
-##### my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:
+**my role in data cleaning and data validation involved several tasks to ensure the data was in a usable and reliable format. Here are some key steps I took:**
    - First, I cleaned the data in Excel and adjusted the date format.
    - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
    - Chose appropriate `data types` for accurate storage and manipulation of data.
@@ -52,7 +52,7 @@ This dataset contains 7 columns and 924 rows.
 
 ## Exploratory Data Analysis (EDA):
 
-##### Some of the business questions I've answered based on the data:
+**Some of the business questions I've answered based on the data:**
 
 1.  Determine the number of unique car models in the data?
 2.  What is the total number of sales transactions in the dataset?
