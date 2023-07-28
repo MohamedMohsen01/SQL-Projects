@@ -11,7 +11,7 @@ The primary objective of this sales data analytics project is to uncover valuabl
 
 The dataset employed in this analysis was obtained from the Kaggle website. It encompasses a comprehensive collection of information concerning the cars sold by the company. The dataset includes essential details such as car models, versions, countries of sale, customer purchase types, car prices, sales figures, and gross profits. This rich dataset forms the foundation for our in-depth analysis aimed at extracting valuable insights to enhance the company's sales performance and overall profitability.
 
-#### Data Dectionary
+### Data Dectionary
 
 This dataset contains 7 columns and 924 rows.
 
@@ -126,7 +126,7 @@ This dataset contains 7 columns and 924 rows.
 
 
 
-3. ## Writing Scripts For some Questions Listed
+3. ## Writing SQL scripts to address various questions from the provided list.
 
 #### 1. What date range are we dealing with in this dataset?
 
@@ -135,7 +135,7 @@ This dataset contains 7 columns and 924 rows.
 SELECT
 	MIN(Period) AS Min_Period,
 	MAX(Period) AS Max_Period
-FROM CarSales;																	
+FROM CarSales;				
 ```
 
 #### 2. What is the number of unique car models in the data?
@@ -473,8 +473,7 @@ SELECT
   (COUNT(*) * STDEV(Price) * STDEV(Gross_Profit)) AS CorrelationCoefficient
 FROM CarSales;			
 ```
-
-** Yes, there is a correlation between car price and gross profit.
+Yes, there is a correlation between car price and gross profit.
  The correlation coefficient of 0.1201 between car price and gross profit suggests a relatively weak positive correlation between these two variables. 
  This means that there is a slight tendency for higher car prices to be associated with slightly higher gross profits, but the relationship is not very strong. 
- The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent. **
+ The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent.
