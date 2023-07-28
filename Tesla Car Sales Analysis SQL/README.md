@@ -117,7 +117,7 @@ This dataset contains 7 columns and 924 rows.
 - AVG
 - ROW_NUMBER()
 - ROUND
-- WHERE 
+- WHERE BETWEEN
 - CASE statement 
 - CTEs
 - STDEV
