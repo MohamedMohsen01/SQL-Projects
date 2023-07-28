@@ -49,6 +49,8 @@ This dataset contains 7 columns and 924 rows.
    - Chose appropriate `data types` for accurate storage and manipulation of data.
    - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
  
+ 5. **Feature Engineering**
+   - I have created a new column called `month` to extract the transaction's corresponding month of the year (January, February, March, etc.). This additional data will be instrumental in identifying the months with the highest sales and profitability.
      
 
 ## Exploratory Data Analysis (EDA):
