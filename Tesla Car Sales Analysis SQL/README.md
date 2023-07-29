@@ -10,6 +10,7 @@
 6. [Results](#Results)
 7. [Conclusion](#Conclusion)
 8. [SQL scripts](#Writing-SQL-scripts-to-address-various-questions-from-the-provided-list)
+9. [Project Code](#Code)
 
 
 
