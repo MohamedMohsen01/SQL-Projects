@@ -60,12 +60,12 @@ The dataset consists of 7 columns with their corresponding data types:
    - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
  
  5. **Feature Engineering**
-   - A new column called "month" was created to extract the corresponding month of each transaction, aiding in identifying months with the highest sales and profitability.
+   - A new column called `month` was created to extract the corresponding month of each transaction, aiding in identifying months with the highest sales and profitability.
      
 
 ## Exploratory Data Analysis (EDA)
 
-**Throughout the analysis, I'veanswered various business questions based on the data, including:**
+**Throughout the analysis, I'v eanswered various business questions based on the data, including:**
 
 1.  Determine the number of unique car models in the data?
 2.  What is the total number of sales transactions in the dataset?
