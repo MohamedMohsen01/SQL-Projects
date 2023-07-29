@@ -22,7 +22,7 @@ The purpose of this analysis is to gain valuable insights and patterns within Te
 
 The dataset used in this analysis was obtained from the Kaggle website and contains 924 rows and 7 columns. The columns include Model, Period, Country, Purchase_type, Version, Price, and Gross_Profit, providing comprehensive information about the cars sold by the company.
 
-***Data Dictionary***
+**Data Dictionary:**
 
 The dataset consists of 7 columns with their corresponding data types:
 
