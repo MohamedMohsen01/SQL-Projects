@@ -12,7 +12,7 @@ The dataset used in this analysis was obtained from the Kaggle website and conta
 
 ### Data Dictionary:
 
-This dataset contains 7 columns and 924 rows.
+The dataset consists of 7 columns with their corresponding data types:
 
 | Column Name                | Column Datatype |
 | :------------------------- | :-------------: |
@@ -37,17 +37,15 @@ This dataset contains 7 columns and 924 rows.
  - Explored the dataset's structure, available columns, data types, and the data dictionary to understand its contents and objectives.
 
 3. **Data Assessment:** 
-  - Thoroughly assessed data quality and structure to identify and resolve potential issues or inconsistencies. This included detecting missing values, outliers, inconsistent formatting, and data entry errors.
+  - Thorough data quality assessment was conducted, addressing missing values, outliers, inconsistent formatting, and data entry errors.
 
 4. **Data Cleaning and Data Validation:**
 
  Several tasks were performed to ensure the data was in a usable and reliable format. Here are some key steps I took:
-   - First, I cleaned the data in Excel and adjusted the date format.
-   - Added constraints to the data in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
+   - Cleaned the data in Excel and adjusted the date format.
+   - Added constraints in Microsoft SQL Server, like a `Primary Key` for uniqueness and data integrity.
    - Chose appropriate `data types` for accurate storage and manipulation of data.
    - Enforced `NOT NULL` constraints on relevant columns to ensure data completeness and prevent the insertion of null values.
-
-, including cleaning the data in Excel, adjusting date formats, adding constraints for data integrity in Microsoft SQL Server, and choosing appropriate data types.
  
  5. **Feature Engineering**
    - A new column called "month" was created to extract the corresponding month of each transaction, aiding in identifying months with the highest sales and profitability.
@@ -55,7 +53,7 @@ This dataset contains 7 columns and 924 rows.
 
 ## Exploratory Data Analysis (EDA):
 
-**Some of the business questions I've answered based on the data:**
+**Throughout the analysis, I'veanswered various business questions based on the data, including:**
 
 1.  Determine the number of unique car models in the data?
 2.  What is the total number of sales transactions in the dataset?
