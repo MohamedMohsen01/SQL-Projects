@@ -165,7 +165,10 @@ We identified the months with the highest gross profit, providing valuable infor
 
 **12. Standard Deviation:** 
 The standard deviation of car prices and gross profits was calculated, providing insight into the variability of these metrics within the dataset.
-Conclusion: The analysis of Tesla car sales data has provided critical insights into top-performing car models, profitable time periods, high-performing regions, and purchase preferences. Armed with this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth for the company.
+
+## Conclusion: 
+
+The analysis of Tesla car sales data has provided critical insights into top-performing car models, profitable time periods, high-performing regions, and purchase preferences. Armed with this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth for the company.
 
 
 
