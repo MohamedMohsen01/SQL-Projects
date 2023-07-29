@@ -601,8 +601,7 @@ WITH monthly_profit AS(
     ORDER BY 'monthly_profit' DESC;			
 ```
 
-#### 38. Calculating the average car price and gross profit
-#### Calculating the standard deviation of price and gross profits
+#### 38. Calculating the average car price, gross profit, and the standard deviation of price and gross profits
 
 ```sql
 SELECT
