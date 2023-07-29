@@ -139,7 +139,7 @@ The dataset consists of 7 columns with their corresponding data types:
 - `Cash purchase` was the most commonly used purchase type, accounting for the majority of sales transactions.
 
 **3. Profitable Time Periods:**
-- `Apri`l had the highest sales and profitability.
+- `April` had the highest sales and profitability.
 
 **4. Gross Profit and Sales by Country:**
 - `The US` emerged as the top performer in terms of total sales and gross profit, closely followed by `Germany`.
@@ -159,7 +159,7 @@ The dataset consists of 7 columns with their corresponding data types:
 - The correlation coefficient of 0.1201 suggests a relatively `weak positive correlation` between car price and gross profit.
 
 **9. Regional Sales Analysis:**
-- `Model S` is the most sold car model in each country, with the highest demand for Tesla cars in the US.
+- `Model S` is the most sold car model in each country, with the highest demand for Tesla cars in `the US`.
 - `The US` also had the highest number of cash purchases.
 
 **10. Car Version and Model Analysis:**
