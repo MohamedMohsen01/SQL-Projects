@@ -35,7 +35,7 @@ This dataset contains sales transactions from three different branches of Walmar
 **Data Understanding:**
 
 > - Familiarized with dataset structure, columns, data types, and data dictionary.
-> - Identified specific business questions or objectives.
+> - Identified specific business questions and objectives.
 
 **Data Assessment:**
 
@@ -50,7 +50,7 @@ This dataset contains sales transactions from three different branches of Walmar
 
 **Feature Engineering:** 
 
-> - Created new variables and features from existing data that provided additional insights, such as:
+>  Created new variables and features from existing data that provided additional insights, such as:
 > - created a column called `time_of_day` to capture sales patterns in the Morning, Afternoon, and Evening. This information will help determine the peak sales        periods during the day.
 
 > - created a column named `day_name`to extract the specific day of the week when each transaction occurred (Mon, Tue, Wed, Thur, Fri). This data will aid in understanding the busiest days for each branch.
@@ -60,7 +60,51 @@ This dataset contains sales transactions from three different branches of Walmar
 
 
 
-## Analysis Approach
+## Exploratory Data Analysis (EDA): 
+The EDA section answers several business questions based on the dataset:
+
+### Generic Questions
+1. How many unique cities does the data have?
+2. In which city is each branch?
+
+### Product-related Questions
+1. How many unique product lines are included in the data?
+2. Which payment method is the most frequently used?
+3. Which product line has the highest sales volume?
+4. What is the total revenue for each month?
+5. Which month had the highest Cost of Goods Sold (COGS)?
+6. Which product line generated the highest revenue?
+7. Which city had the highest revenue?
+8. Which product line had the highest Value Added Tax (VAT)?
+9. For each product line, add a column indicating whether it has "Good" or "Bad" sales, based on whether its sales are above or below the average.
+10. Which branch sold more products than the average number of products sold?
+11. What is the most common product line based on gender?
+12. What is the average rating for each product line?
+
+### Sales-related Questions
+
+1. How many sales were made during each time of the day for each weekday?
+2. Which customer type generates the highest revenue?
+3. Which city has the highest tax percentage or VAT (Value Added Tax)?
+4. Among the customer types, which one pays the highest amount in VAT?
+
+### Customer-related Questions
+
+1. How many distinct customer types are represented in the data?
+2. How many unique payment methods are available in the data?
+3. Which customer type generates the highest revenue?
+4. Which customer type has the highest total sales?
+5. What is the predominant gender among the customers?
+6. How is the gender distributed across branches?
+7. During which time of the day do customers provide the most ratings?
+8. During which time of the day do customers provide the most ratings for each branch?
+9. Which day of the week has the highest average ratings overall?
+10. Which day of the week has the highest average ratings for each branch?
+
+
+
+## Results and Analysis Approach 
+
 
 **Product Analysis:**
 
@@ -76,52 +120,6 @@ This dataset contains sales transactions from three different branches of Walmar
 
 - Uncovered customer segments and their purchasing patterns.
 - Utilized SQL queries to extract actionable insights, enabling targeted marketing efforts and optimizing customer satisfaction.
-
-
-
-
-## Exploratory Data Analysis (EDA): 
-Some of the business questions I've answered based on the dataset:
-
-### Generic Questions
-1. How many unique cities does the data have?
-2. In which city is each branch?
-
-### Product related Questions
-1. How many unique product lines are included in the data?
-2. Which payment method is the most frequently used?
-3. Which product line has the highest sales volume?
-4. What is the total revenue for each month?
-5. Which month had the highest Cost of Goods Sold (COGS)?
-6. Which product line generated the highest revenue?
-7. Which city had the highest revenue?
-8. Which product line had the highest Value Added Tax (VAT)?
-9. For each product line, add a column indicating whether it has "Good" or "Bad" sales, based on whether its sales are above or below the average.
-10. Which branch sold more products than the average number of products sold?
-11. What is the most common product line based on gender?
-12. What is the average rating for each product line?
-
-### Sales related Questions
-
-1. How many sales were made during each time of the day for each weekday?
-2. Which customer type generates the highest revenue?
-3. Which city has the highest tax percentage or VAT (Value Added Tax)?
-4. Among the customer types, which one pays the highest amount in VAT?
-
-### Customer related Questions
-
-1. How many distinct customer types are represented in the data?
-2. How many unique payment methods are available in the data?
-3. Which customer type generates the highest revenue?
-4. Which customer type has the highest total sales?
-5. What is the predominant gender among the customers?
-6. How is the gender distributed across branches?
-7. During which time of the day do customers provide the most ratings?
-8. During which time of the day do customers provide the most ratings for each branch?
-9. Which day of the week has the highest average ratings overall?
-10. Which day of the week has the highest average ratings for each branch?
-
-
 
 ## Revenue And Profit Calculations
 
