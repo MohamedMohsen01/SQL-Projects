@@ -4,14 +4,11 @@
 ## Content Index
 1. [Introduction](#Introduction)
 2. [Data Description](#Data-Description)
- - [Data Dictionary](#Data-Dictionary)
-3. [Methodology](#tuple-methods)
-5. [Exploratory Data Analysis (EDA)](#set-methods)
-6. [Query types used](#file-object-methods)
-7. [Results](#boolean-methods)
-8. [Conclusion](#range-function)
-
-
+3. [Methodology](#Methodology)
+4. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-(EDA))
+5. [Query types used](#Query-types-used)
+6. [Results](#Results)
+7. [Conclusion](#Conclusion)
 
 
 
