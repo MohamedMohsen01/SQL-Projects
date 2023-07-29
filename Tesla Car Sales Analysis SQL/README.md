@@ -13,9 +13,6 @@
 9. [Project Code](#Code)
 
 
-
-Writing SQL scripts to address various questions from the provided list
-
 ## Introduction
 The purpose of this analysis is to gain valuable insights and patterns within Tesla car sales data. By thoroughly examining sales data across various regions, products, and time frames, we aim to identify top-performing products, high-performing regions, and the most profitable time periods. These findings will help optimize our sales strategies and enhance overall performance to drive substantial revenue growth.
 
