@@ -5,7 +5,7 @@
 1. [Introduction](#Introduction)
 2. [Data Description](#Data-Description)
 3. [Methodology](#Methodology)
-4. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-(EDA))
+4. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-EDA)
 5. [Query types used](#Query-types-used)
 6. [Results](#Results)
 7. [Conclusion](#Conclusion)
