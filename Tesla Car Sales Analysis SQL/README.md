@@ -130,15 +130,15 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 ## Results
-1. Top Performing Car Models: 
+**1. Top Performing Car Models:** 
 
 The dataset includes 2 unique car models. Among these, `Model S` car model stood out as top performer based on their total gross profit and sales volume. 
 
-2. Popular Car Versions and Purchase Types: 
+**2. Popular Car Versions and Purchase Types:** 
 
 `75 RWD` emerged as the most popular car version among buyers, indicating high demand. Additionally, `Cash purchase` was the most commonly used purchase type, accounting for the majority of sales transactions.
 
-3. Profitable Time Periods: 
+**3. Profitable Time Periods:** 
 
 Analyzing the data based on the newly created "month" column, we found that `April` had the highest sales and profitability.
 
