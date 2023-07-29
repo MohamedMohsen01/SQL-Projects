@@ -131,16 +131,41 @@ The dataset consists of 7 columns with their corresponding data types:
 
 ## Results
 **1. Top Performing Car Models:** 
-
 The dataset includes 2 unique car models. Among these, `Model S` car model stood out as top performer based on their total gross profit and sales volume. 
 
 **2. Popular Car Versions and Purchase Types:** 
-
 `75 RWD` emerged as the most popular car version among buyers, indicating high demand. Additionally, `Cash purchase` was the most commonly used purchase type, accounting for the majority of sales transactions.
 
 **3. Profitable Time Periods:** 
-
 Analyzing the data based on the newly created "month" column, we found that `April` had the highest sales and profitability.
+
+**4. Gross Profit and Sales by Country:**
+The analysis highlighted the total gross profit and sales for each country where Tesla cars were sold. The `US` emerged as the top performer in terms of total sales and gross profit, closely followed by `Germany`. 
+
+**5. Average Sales Price and Gross Profit by Car Model:** 
+For each car model, I’ve calculated the average sales price and gross profit. `Model X` had the highest average sales price and gross profit, indicating its premium positioning. Moreover, `Model S` generated the highest total gross profit.
+
+**6. Sales Performance by Purchase Type:** 
+`Cash purchase` generated the highest total sales and the highest average gross profit per transaction.
+
+**7. Price Distribution and Highest Prices:** 
+The highest car price in the dataset was `90D AWD` car version with $88700. Additionally, the highest car prices in individual countries were `90D car version in Australia with $80000`, `90D AWD in Germany with $88700, `90D AWD in The US with $88700`.
+
+**8. Correlation between Car Price and Gross Profit:**
+The correlation coefficient is 0.1201 between car price and gross profit and it suggests a relatively weak positive correlation between these two variables. This means that there is a slight tendency for higher car prices to be associated with slightly higher gross profits, but the relationship is not very strong. The value being positive indicates that when car prices increase, gross profits also tend to increase to some extent.
+
+**9. Regional Sales Analysis:**
+`Model S` is the most sold car model in each country, along with the country with the highest demand for Tesla cars is `The US’ and the country with the highest number of cash purchases is also `The US`
+
+**10. Car Version and Model Analysis:** 
+Sales transactions for each car version and model in the US were investigated, identifying the most popular car models in terms of sales volume and gross profit. The most common purchase type for specific car models was also determined.
+
+**11. Monthly Gross Profit:**
+We identified the months with the highest gross profit, providing valuable information for planning and resource allocation.
+
+**12. Standard Deviation:** 
+The standard deviation of car prices and gross profits was calculated, providing insight into the variability of these metrics within the dataset.
+Conclusion: The analysis of Tesla car sales data has provided critical insights into top-performing car models, profitable time periods, high-performing regions, and purchase preferences. Armed with this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth for the company.
 
 
 
