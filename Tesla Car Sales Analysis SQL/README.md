@@ -1,16 +1,32 @@
 ## Tesla Car Sales Data Analysis
 
 
-## Introduction:
+## Content Index
+1. [Introduction](#Introduction)
+2. [Data Description](#Data-Description)
+ - [Data Dictionary](#Data-Dictionary)
+3. [Methodology](#tuple-methods)
+5. [Exploratory Data Analysis (EDA)](#set-methods)
+6. [Query types used](#file-object-methods)
+7. [Results](#boolean-methods)
+8. [Conclusion](#range-function)
+
+
+
+
+
+
+
+## Introduction
 The purpose of this analysis is to gain valuable insights and patterns within Tesla car sales data. By thoroughly examining sales data across various regions, products, and time frames, we aim to identify top-performing products, high-performing regions, and the most profitable time periods. These findings will help optimize our sales strategies and enhance overall performance to drive substantial revenue growth.
 
 
 
-## Data Description:
+## Data Description
 
 The dataset used in this analysis was obtained from the Kaggle website and contains 924 rows and 7 columns. The columns include Model, Period, Country, Purchase_type, Version, Price, and Gross_Profit, providing comprehensive information about the cars sold by the company.
 
-### Data Dictionary:
+### Data Dictionary
 
 The dataset consists of 7 columns with their corresponding data types:
 
@@ -27,7 +43,7 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 
-## Methodology:
+## Methodology
 
 1. **Data Collection:**
   - The dataset used for this analysis was sourced from the Kaggle website.
@@ -51,7 +67,7 @@ The dataset consists of 7 columns with their corresponding data types:
    - A new column called "month" was created to extract the corresponding month of each transaction, aiding in identifying months with the highest sales and profitability.
      
 
-## Exploratory Data Analysis (EDA):
+## Exploratory Data Analysis (EDA)
 
 **Throughout the analysis, I'veanswered various business questions based on the data, including:**
 
@@ -105,7 +121,7 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 
-## Query types used:
+## Query types used
 - ALTET TABLE
 - ALTER COLUMN
 - ADD
@@ -171,7 +187,7 @@ The dataset consists of 7 columns with their corresponding data types:
 **12. Standard Deviation:**
 - The standard deviation of car prices and gross profits was calculated, providing insight into the variability of these metrics within the dataset.
 
-## Conclusion: 
+## Conclusion
 
 The analysis of Tesla car sales data has provided critical insights into top-performing car models, profitable time periods, high-performing regions, and purchase preferences. Armed with this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth for the company.
 
@@ -179,7 +195,7 @@ The analysis of Tesla car sales data has provided critical insights into top-per
 
 
 
-## Writing SQL scripts to address various questions from the provided list.
+## Writing SQL scripts to address various questions from the provided list
 
 #### 1. Let's check What date range are we dealing with in this dataset?
 
