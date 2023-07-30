@@ -140,7 +140,6 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 
-
 ## Results
 
 
@@ -158,89 +157,85 @@ The dataset consists of 7 columns with their corresponding data types:
 **4. Best Performing Car Model:**
 - 'Model X' emerged as the best-performing model with total sales of $3,555,430,000.00.
 
-**Performance of Car Versions within Best-Performing Model:**
+**5. Performance of Car Versions within Best-Performing Model:**
 - Among the car versions in 'Model X', the 'P90D' version achieved the highest revenue of $2,490,470,000.00, while the '90D' version generated $1,064,960,000.00.
 
-Performance of Car Versions within Worst-Performing Model:
+**6. Performance of Car Versions within Worst-Performing Model:**
 Within 'Model S', the '75 RWD' version was the top-selling car version, while the '90D AWD' version had the least sales.
 
-Car Versions with Highest and Lowest All-Time Sales:
+**7. Car Versions with Highest and Lowest All-Time Sales:**
 The 'P90D' car version had the highest sales with $2,490,470,000.00, while the '90D AWD' car version had the lowest sales with $393,916,700.00.
 
-Car Version with Highest Total Gross Profit:
+**8. Car Version with Highest Total Gross Profit:**
 The 'P90D' car version generated the highest total gross profit among all versions.
 
-Most Popular Car Version:
+**9. Most Popular Car Version:**
 The 'P90D' car version was the most popular among buyers, with 33,655 cars sold, while the '90D AWD' version had 4,441 sales.
 
-Countries in the Dataset:
-The dataset includes data from the US, Germany, and Australia.
-
-Total Gross Profit and Sales for Each Country:
+**10. Total Gross Profit and Sales for Each Country:**
 The US had the highest demand for Tesla cars, with 63,469 cars sold, followed by Germany with 16,956 cars.
 
-Average Gross Profit Across Different Car Versions for Each Country:
+**11. Average Gross Profit Across Different Car Versions for Each Country:**
 Among different car versions in Australia, the '90D AWD' version had the highest average gross profit, while in Germany, the '75D AWD' version had the highest average gross profit. In the US, the '90D AWD' version had the highest average gross profit.
 
-Most Sold Car Model in Each Country:
+**12. Most Sold Car Model in Each Country:**
 The 'Model X' was the most popular car model in all countries.
 
-Most Sold Car Version in Each Country:
+**13. Most Sold Car Version in Each Country:**
 The 'P90D' car version was the most sold version in each country.
 
-Most Expensive Car Version in Each Country:
+**14. Most Expensive Car Version in Each Country:**
 The '90D AWD' car version was the most expensive version in each country.
 
-Highest Car Version Price in Each Country:
+**15. Highest Car Version Price in Each Country:**
 The highest car price in all three countries was $88,700.00 for the '90D AWD' car version.
 
-Car Models Sold in the US in 2016 and 2017:
+**16. Car Models Sold in the US in 2016 and 2017:**
 In 2016, 'Model X' was sold 17,553 times, and 'Model S' was sold 14,592 times in the USA. In 2017, 'Model X' was sold 17,238 times, and 'Model S' was sold 14,086 times.
 
-Difference in Sales Between First and Second Quarter of 2016 and 2017:
+**17. Difference in Sales Between First and Second Quarter of 2016 and 2017:**
 The data showed a difference in sales between the first and second quarter of 2016. However, there was no significant difference between the first and second quarter of 2017.
 
-Difference in Sales Between Car Models in the First and Second Quarter of 2016 and 2017:
+**18. Difference in Sales Between Car Models in the First and Second Quarter of 2016 and 2017:**
 There was a difference in sales between car models in the first and second quarter of 2016. However, the difference was not substantial in the first and second quarter of 2017.
 
-Total Revenue for Each Month (All-Time):
+**19. Total Revenue for Each Month (All-Time):**
 July had the highest revenue with $564,770,000.00, while January had the lowest revenue.
 
-Monthly Gross Profit for Each Month (All-Time):
+**20. Monthly Gross Profit for Each Month (All-Time):**
 Gross profits followed a similar trend to revenue, with July having the highest monthly gross profit.
 
-Total Revenue for Each Month in 2016 and 2017:
+**21. Total Revenue for Each Month in 2016 and 2017:**
 April had the highest revenue in 2016 with $283,424,700.00, and July had the highest revenue in 2017 with $282,845,500.00. October had the lowest revenue in 2017 with $244,003,900.00.
 
-Unique Car Models Sold in Australia:
+**22. Unique Car Models Sold in Australia:**
 A total of two unique car models were sold in Australia.
 
-Total Gross Profit Generated from Sales in Germany:
+**23. Total Gross Profit Generated from Sales in Germany:**
 Germany generated a total gross profit of $378,564,400.00 from all sales.
 
-Average Revenue of All Cars Sold in the US:
+**24. Average Revenue of All Cars Sold in the US:**
 The average revenue of all cars sold in the US was $75,281.950.
 
-Total Gross Profit Generated from Each Car Version in the US:
+**25. Total Gross Profit Generated from Each Car Version in the US:**
 The '90D AWD' car version had the highest total gross profit in the US.
 
-Car Model with the Highest Price in the US:
+**26. Car Model with the Highest Price in the US:**
 'Model X' had the highest price in the US with $2,635,476,000.00.
 
-Sales Transactions for Each Car Version in the US:
+**27. Sales Transactions for Each Car Version in the US:**
 The '90D AWD' car version had the highest number of sales transactions in the US.
 
-Car Model with the Highest Revenue in Australia:
+**28. Car Model with the Highest Revenue in Australia:**
 'Model X' had the highest revenue in Australia with $205,742,000.00.
 
-Total Sales Generated from All Sales in Australia:
+**29. Total Sales Generated from All Sales in Australia:**
 Australia had total sales of $378,564,400.00.
 
-Number of Purchase Types:
+**30. Number of Purchase Types:**
 The dataset contains two purchase types: "Cash Purchase" and "Deposit."
 
-Most Commonly Used Purchase Type:
-
+**31. Most Commonly Used Purchase Type:**
 The "Deposit
 
 
