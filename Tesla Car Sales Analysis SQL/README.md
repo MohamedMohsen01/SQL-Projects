@@ -143,49 +143,98 @@ The dataset consists of 7 columns with their corresponding data types:
 
 ## Results
 
-**1. Top Performing Car Models:**
-- The dataset includes 2 unique car models, with `Model S` standing out as the top performer based on total gross profit and sales volume.
 
-**2. Popular Car Versions and Purchase Types:**
-- `75 RWD` emerged as the most popular car version among buyers.
-- `Cash purchase` was the most commonly used purchase type, accounting for the majority of sales transactions.
+**1. Sales and Revenue Analysis:**
 
-**3. Profitable Time Periods:**
-- `April` had the highest sales and profitability.
+Annual Total Revenue for Each Car Model:
 
-**4. Gross Profit and Sales by Country:**
-- `The US` emerged as the top performer in terms of total sales and gross profit, closely followed by `Germany`.
+- In 2016, 'Model X' achieved $1,809,338,000.00 in total sales, while 'Model S' had $1,443,879,100.00.
+- In 2017, 'Model X' reached $1,746,092,000.00 in total sales, and 'Model S' had $1,441,758,400.00.
 
-**5. Average Sales Price and Gross Profit by Car Model:**
-- `Model X` had the highest average sales price and gross profit, indicating its premium positioning.
-- `Model S` generated the highest total gross profit.
+Best Performing Car Model:
+- 'Model X' emerged as the best-performing model with total sales of $3,555,430,000.00.
 
-**6. Sales Performance by Purchase Type:**
-- `Cash purchase` generated the highest total sales and the highest average gross profit per transaction.
+Performance of Car Versions within Best-Performing Model:
+- Among the car versions in 'Model X', the 'P90D' version achieved the highest revenue of $2,490,470,000.00, while the '90D' version generated $1,064,960,000.00.
 
-**7. Price Distribution and Highest Prices:**
-- The highest car price was `$88700 for the 90D AWD` car version.
-- The highest car prices in individual countries were `$80000 for the 90D car version in Australia` and `$88700 for the 90D AWD in Germany and the US`.
+Performance of Car Versions within Worst-Performing Model:
+- Within 'Model S', the '75 RWD' version was the top-selling car version, while the '90D AWD' version had the least sales.
 
-**8. Correlation between Car Price and Gross Profit:**
-- The correlation coefficient of 0.1201 suggests a relatively `weak positive correlation` between car price and gross profit.
+Car Versions with Highest and Lowest All-Time Sales:
+- The 'P90D' car version had the highest sales with $2,490,470,000.00, while the '90D AWD' car version had the lowest sales with $393,916,700.00.
 
-**9. Regional Sales Analysis:**
-- `Model S` is the most sold car model in each country, with the highest demand for Tesla cars in `the US`.
-- `The US` also had the highest number of cash purchases.
+Car Version with Highest Total Gross Profit:
+The 'P90D' car version generated the highest total gross profit among all versions.
+Most Popular Car Version:
 
-**10. Car Version and Model Analysis:**
-- Sales transactions for each car version and model in the US were investigated, identifying the most popular car models in terms of sales volume and gross profit. The most common purchase type for specific car models was also determined.
+The 'P90D' car version was the most popular among buyers, with 33,655 cars sold, while the '90D AWD' version had 4,441 sales.
+**2. Country Analysis:**
 
-**11. Monthly Gross Profit:**
-- The analysis identified the months with the highest gross profit, providing valuable information for planning and resource allocation.
+Total Gross Profit and Sales for Each Country:
+- The US had the highest demand for Tesla cars, with 63,469 cars sold, followed by Germany with 16,956 cars.
 
-**12. Standard Deviation:**
-- The standard deviation of car prices and gross profits was calculated, providing insight into the variability of these metrics within the dataset.
+Average Gross Profit Across Different Car Versions for Each Country:
+- Among different car versions in Australia, the '90D AWD' version had the highest average gross profit, while in Germany, the '75D AWD' version had the highest average gross profit. In the US, the '90D AWD' version had the highest average gross profit.
 
-## Conclusion
+**3. Performance Comparison by Country:**
+Most Sold Car Model in Each Country:
+- The 'Model X' was the most popular car model in all countries.
 
-The analysis of Tesla car sales data has provided critical insights into top-performing car models, profitable time periods, high-performing regions, and purchase preferences. Armed with this information, we can fine-tune our sales strategies, optimize overall performance, and drive substantial revenue growth for the company.
+Most Sold Car Version in Each Country:
+- The 'P90D' car version was the most sold version in each country.
+
+Most Expensive Car Version in Each Country:
+- The '90D AWD' car version was the most expensive version in each country.
+
+Highest Car Version Price in Each Country:
+- The highest car price in all three countries was $88,700.00 for the '90D AWD' car version.
+
+**4. US Sales Analysis:**
+Car Models Sold in the US in 2016 and 2017:
+- In 2016, 'Model X' was sold 17,553 times, and 'Model S' was sold 14,592 times in the USA. In 2017, 'Model X' was sold 17,238 times, and 'Model S' was sold 14,086 times.
+
+Difference in Sales Between First and Second Quarter of 2016 and 2017:
+The data showed a difference in sales between the first and second quarter of 2016. However, there was no significant difference between the first and second quarter of 2017.
+
+Difference in Sales Between Car Models in the First and Second Quarter of 2016 and 2017:
+There was a difference in sales between car models in the first and second quarter of 2016. However, the difference was not substantial in the first and second quarter of 2017.
+
+**5. Monthly Revenue Analysis:**
+Total Revenue for Each Month (All-Time):
+- July had the highest revenue with $564,770,000.00, while January had the lowest revenue.
+
+Monthly Gross Profit for Each Month (All-Time):
+- Gross profits followed a similar trend to revenue, with July having the highest monthly gross profit.
+
+Total Revenue for Each Month in 2016 and 2017:
+- April had the highest revenue in 2016 with $283,424,700.00, and July had the highest revenue in 2017 with $282,845,500.00. October had the lowest revenue in 2017 with $244,003,900.00.
+
+
+**6. Other Key Insights:**
+1. Unique Car Models Sold in Australia:
+- A total of two unique car models were sold in Australia.
+
+2. Total Gross Profit Generated from Sales in Germany:
+Germany generated a total gross profit of $378,564,400.00 from all sales.
+
+3. Average Revenue of All Cars Sold in the US:
+The average revenue of all cars sold in the US was $75,281.950.
+
+4. Total Gross Profit Generated from Each Car Version in the US:
+The '90D AWD' car version had the highest total gross profit in the US.
+
+5. Car Model with the Highest Price in the US:
+'Model X' had the highest price in the US with $2,635,476,000.00.
+
+6. Sales Transactions for Each Car Version in the US:
+The '90D AWD' car version had the highest number of sales transactions in the US.
+
+7. Car Model with the Highest Revenue in Australia:
+'Model X' had the highest revenue in Australia with $205,742,000.00.
+
+8. Total Sales Generated from All Sales in Australia:
+- Australia had total sales of $378,564,400.00.
+
 
 
 
