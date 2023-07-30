@@ -232,13 +232,18 @@ The '90D AWD' car version had the highest number of sales transactions in the US
 **29. Total Sales Generated from All Sales in Australia:**
 Australia had total sales of $378,564,400.00.
 
-**30. Number of Purchase Types:**
-The dataset contains two purchase types: "Cash Purchase" and "Deposit."
-
-**31. Most Commonly Used Purchase Type:**
-The "Deposit
+**30. Most Commonly Used Purchase Type:**
+The "Deposit" purchase type was the most commonly used, with 45,976 transactions.
 
 
+**31. Average Gross Profit for Each Purchase Type:**
+The "Deposit" purchase type showed an average gross profit of $22,095.055, while "Cash Purchase" had an average gross profit of $21,771.944.
+
+**32. Country with the Highest Number of Cash Purchases:**
+The US had the highest number of cash purchases, with 30,628 transactions.
+
+**33. Country with the Highest Number of Deposit Purchases:**
+The US had the highest number of deposit purchases, with 30,841 transactions.
 
 
 ## Code
