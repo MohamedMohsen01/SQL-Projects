@@ -145,20 +145,20 @@ The dataset consists of 7 columns with their corresponding data types:
 
 **1. Revenue Comparison Between Car Models:**
 
-- 'Model X' outperformed 'Model S' in terms of revenue, with a difference of $669,792,500.00 during the entire timeframe.
+'Model X' outperformed 'Model S' in terms of revenue, with a difference of $669,792,500.00 during the entire timeframe.
 
 **2. Car Model with the Highest Total Gross Profit:**
-- 'Model X' generated the highest total gross profit, amounting to $1,039,560,332.87.
+'Model X' generated the highest total gross profit, amounting to $1,039,560,332.87.
 
 **3. Annual Total Revenue for Each Car Model:**
 - In 2016, 'Model X' achieved $1,809,338,000.00 in total sales, while 'Model S' had $1,443,879,100.00.
 - In 2017, 'Model X' reached $1,746,092,000.00 in total sales, and 'Model S' had $1,441,758,400.00.
 
 **4. Best Performing Car Model:**
-- 'Model X' emerged as the best-performing model with total sales of $3,555,430,000.00.
+'Model X' emerged as the best-performing model with total sales of $3,555,430,000.00.
 
 **5. Performance of Car Versions within Best-Performing Model:**
-- Among the car versions in 'Model X', the 'P90D' version achieved the highest revenue of $2,490,470,000.00, while the '90D' version generated $1,064,960,000.00.
+Among the car versions in 'Model X', the 'P90D' version achieved the highest revenue of $2,490,470,000.00, while the '90D' version generated $1,064,960,000.00.
 
 **6. Performance of Car Versions within Worst-Performing Model:**
 Within 'Model S', the '75 RWD' version was the top-selling car version, while the '90D AWD' version had the least sales.
