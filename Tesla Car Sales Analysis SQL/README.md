@@ -304,7 +304,7 @@ Based on the comprehensive exploratory data analysis conducted on the Tesla car 
 - Leverage the knowledge of high-performing months, such as July, to plan targeted marketing campaigns and promotions during peak demand periods.
 - Analyze the reasons behind the difference in sales between the first and second quarter of 2016 and utilize the insights to optimize sales tactics during similar periods in the future.
 
-Pricing Decisions:
+**Pricing Decisions:**
 
 - Continue to monitor the correlation between car price and gross profit. Consider conducting price elasticity analysis to understand how pricing changes may impact profitability.
 - Explore dynamic pricing strategies that take into account market demand and customer preferences to optimize revenue and gross profit.
