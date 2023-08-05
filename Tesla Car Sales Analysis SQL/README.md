@@ -268,7 +268,8 @@ The US had the highest number of deposit purchases, with 30,841 transactions.
 
 
 
-## conclusion 
+
+## Conclusion 
 
 
 Based on the comprehensive exploratory data analysis conducted on the Tesla car sales data, several valuable insights have been obtained. 
