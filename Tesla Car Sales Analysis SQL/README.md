@@ -147,10 +147,19 @@ For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.co
 
 
 
+![photo_5926775240795471108_y](https://github.com/MohamedMohsen01/SQL-Projects/assets/109850173/2888a516-afc2-4fff-8f9a-5ccd648303b3)
+
+
+![photo_5942650041216912698_y](https://github.com/MohamedMohsen01/SQL-Projects/assets/109850173/6e254318-590e-44d8-810c-1198b54ecd65)
+
+
+
+
 
 
 ## Dashboard
-For the Dashboard, check this link [Tesla_Car_Sales_Dashboard](https://www.novypro.com/profile_projects/mohamedmohsen01)
+
+**For the Dashboard, check this link [Tesla_Car_Sales_Dashboard](https://www.novypro.com/project/tesla-car-sales)**
 
 
 
