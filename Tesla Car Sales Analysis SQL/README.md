@@ -1,15 +1,17 @@
 ## Tesla Car Sales Data Analysis Project
 
 
-## Content Index
+## Tabel of Contents
 1. [Introduction](#Introduction)
 2. [Data Description](#Data-Description)
 3. [Methodology](#Methodology)
 4. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-EDA)
 5. [Query types used](#Query-types-used)
-6. [Results](#Results)
-7. [Conclusion](#Conclusion)
-8. [Project Code](#Code)
+6. [Project Code](#Code)
+7. [Dahboard](#Dashboard)
+8. [Results](#Results)
+9. [Conclusion](#Conclusion)
+10. [Recommendations](#Recommendations)
 
 
 ## Introduction
@@ -140,8 +142,21 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 
-## Results
+## Code
+For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis%20SQL/Tesla_Car_Sales_Analysis.sql) file.
 
+
+
+
+
+## Dashboard
+
+
+
+
+
+
+## Results
 
 **1. Revenue Comparison Between Car Models:**
 'Model X' outperformed 'Model S' in terms of revenue, with a difference of $669,792,500.00 during the entire timeframe.
@@ -242,6 +257,9 @@ The US had the highest number of cash purchases, with 30,628 transactions.
 **33. Country with the Highest Number of Deposit Purchases:**
 The US had the highest number of deposit purchases, with 30,841 transactions.
 
+
+
+
 ## conclusion 
 
 
@@ -257,9 +275,8 @@ Based on the comprehensive exploratory data analysis conducted on the Tesla car 
 
 
 
-## Code
-For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis%20SQL/Tesla_Car_Sales_Analysis.sql) file.
 
 
+## Recommendations
 
 
