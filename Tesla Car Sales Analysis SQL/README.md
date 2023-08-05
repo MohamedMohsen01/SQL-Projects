@@ -150,7 +150,7 @@ For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.co
 
 
 ## Dashboard
-
+For the Dashboard, check this link [Tesla_Car_Sales_Dashboard](https://www.novypro.com/profile_projects/mohamedmohsen01)
 
 
 
