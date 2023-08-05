@@ -8,7 +8,7 @@
 4. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-EDA)
 5. [Query types used](#Query-types-used)
 6. [Project Code](#Code)
-7. [Dahboard](#Dashboard)
+7. [Dashboard](#Dashboard)
 8. [Results](#Results)
 9. [Conclusion](#Conclusion)
 10. [Recommendations](#Recommendations)
