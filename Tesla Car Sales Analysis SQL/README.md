@@ -164,7 +164,7 @@ For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.co
 
 
 
-## Results
+## Results and Insights
 
 - 'Model X' outperformed 'Model S' in terms of revenue, with a difference of $669,8 million during the entire timeframe.
 
