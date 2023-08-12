@@ -66,7 +66,7 @@ The dataset consists of 7 columns with their corresponding data types:
 
 ## Exploratory Data Analysis (EDA)
 
-**Throughout the analysis, I'v eanswered various business questions based on the data, including:**
+**Throughout the analysis, I've answered various business questions based on the data, including:**
 
 1. How many sales transactions are there in our dataset?
 2. What is the date range covered by the dataset?
