@@ -143,7 +143,7 @@ The dataset consists of 7 columns with their corresponding data types:
 
 
 ## Code
-For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis%20SQL/Tesla_Car_Sales_Analysis.sql) file.
+For the code, check the [Tesla_Car_Sales_Analysis_queries.sql](https://github.com/MohamedMohsen01/SQL-Projects/blob/main/Tesla%20Car%20Sales%20Analysis/Tesla_Car_Sales_Analysis.sql) file.
 
 
 
